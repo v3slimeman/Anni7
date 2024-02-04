@@ -1,0 +1,80 @@
+1 {
+    area_name "Crimson Fields"
+    tile_graphics Tilefield
+    overlay_graphics Overlaysfield
+    background_graphics ch2bg_b
+
+    fx_shader distortionparticles
+    palette 1
+    
+    ambience wind.ogg
+    
+    music_volume 1
+    ambience_volume 1.5
+    
+    tile_particle_1 drip
+    tile_particle_2 splash
+
+    global_particle_1 wind2
+    global_particle_2 wind
+    
+    npc_1 NPC0
+    npc_2 NPC1
+    npc_3 NPC2
+    decoration_1 MyGrass
+    decoration_2 TheFactory
+    decoration_3 grassfg
+    
+    area_type normal
+
+    art_alts [
+        [OrbSmall, orbblob]
+        [ChainLink2, None]
+        [Floater, TheDoor]
+    ]
+
+    2 {
+        art_alts [
+        [Floater, WeHaveIt]
+        ]
+    }
+
+    3 {
+        decoration_3 grassfg2
+    }
+}
+
+base {
+    area_name "Rebel Base"
+    tile_graphics Tilesalt
+    overlay_graphics Overlayscomplex
+    background_graphics field2bg
+    foreground_graphics None
+    fx_shader distortionparticles
+    palette 2
+    
+    music sallyport.ogg
+    ambience flesh.ogg
+    
+    music_volume 1
+    ambience_volume 1
+    
+    tile_particle_1 drip
+    tile_particle_2 splash
+    
+    npc_1 CryingNPC
+    npc_2 WetFloorNPC
+    npc_3 NPC2
+    decoration_1 Decoration0
+    decoration_2 Decoration1
+    decoration_3 inst10
+    
+    area_type normal
+
+    art_alts [
+        [OrbSmall, orbblob]
+        [ChainLink2, None]
+    ]
+}
+
+

@@ -1,0 +1,33 @@
+TestNPC {
+#basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        "we are \nfucked \ndude"
+   
+    ]
+}
+
+CryingNPC {
+#upside down crying
+    movieclip NPCBA1
+    sound_id NPCBlob
+    text [
+        "hello \ni am Joe \nwhat can i do for you?"
+        "\n. . ."
+        "directions? \nwell, if you go right \nyou'll meet the boss"
+        "\nuhm" 
+        "on your way there, \nyou might see some \nfreaky flesh things."
+        "don't pay them any \n mind."
+        "once you go in \none, you may not \ncome back out."
+    ]
+}
+
+WetFloorNPC {
+#wet floor sign
+    movieclip NPCBA2
+    sound_id none
+    text [
+        "CAUTION!\n\nWet Floor"
+    ]
+}
