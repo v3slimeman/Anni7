@@ -64,7 +64,7 @@ base {
     
     npc_1 CryingNPC
     npc_2 WetFloorNPC
-    npc_3 NPC2
+    npc_3 BruiseNPC
     decoration_1 Decoration0
     decoration_2 Decoration1
     decoration_3 inst10
