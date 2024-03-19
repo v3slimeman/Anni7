@@ -13,13 +13,13 @@ CryingNPC {
     movieclip NPCBA1
     sound_id NPCBlob
     text [
-        "hello \ni am Joe \nwhat can i do for you?"
+        "hello \ni am Joe \nwhat can i do \nfor you?"
         "\n. . ."
         "directions? \nwell, if you go right \nyou'll meet the boss"
         "\nuhm" 
-        "on your way there, \nyou might see some \nfreaky flesh things."
+        "on your way there, \nyou might see some \nincompehensible machinations."
         "don't pay them any \n mind."
-        "once you go in \none, you may not \ncome back out."
+        "we have had a \n lot of casualties \nfrom those."
     ]
 }
 
@@ -31,3 +31,36 @@ WetFloorNPC {
         "CAUTION!\n\nWet Floor"
     ]
 }
+
+BruiseNPC {
+#wet floor sign
+    movieclip NPCBA3
+    sound_id none
+    text [
+        "CAUTION!\n\nWet Floor"
+    ]
+}
+
+NPCH4 {
+#basic sideways
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "guh . .\n\nguh . ."
+        "i\nhunger\n. . ."
+        "\n300. . ."
+        "must\nbe\nblood"
+        "must\nbe\nfresh"
+        "\n. . ."
+        "\nfeed me . . ."
+    ]
+    
+    alt_text [
+        "\n. . ."
+        "\ngrumble"
+        "\ngrumble"
+        "\n. . ."
+    ]
+}
+
+
