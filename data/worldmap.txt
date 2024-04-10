@@ -21,8 +21,8 @@ meta {
     downwipes [4-1hub 4c-15 5a-1 3d-23 4a-1 5bxu-5 6-21]
     
     stevenheads [NPCH1 NPCH2 NPCH3 NPCH4]
-    steventhreshtumors [50 100 170 300]
-    stevenlevels [10x-7 10x-5 10x-3 10x-1]
+    steventhreshtumors [50 100 170 0]
+    stevenlevels [10x-7 10x-5 10x-3 ttu-0]
     
     mainworlds [1 2 3 4 4a 4b 4c 5a 5b 5c 1d 2d 3d 6 7] //if you pause on these worlds, it lets you open the map. otherwise you get "exit area"
     cartworlds [c1 c2 c3 c4a c4b c4c c5a c5b c5c c6 g0 g1 g2 g3 g4 g5 g6 g9 i1 i2 i3 i4 i5] //launch console automatically when you exit from these worlds
