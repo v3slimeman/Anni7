@@ -18,7 +18,7 @@
     global_particle_1 wind2
     global_particle_2 wind
     
-    npc_1 NPC0
+    npc_1 NPCH4
     npc_2 NPC1
     npc_3 NPC2
     decoration_1 MyGrass
@@ -75,6 +75,100 @@ base {
         [OrbSmall, orbblob]
         [ChainLink2, None]
     ]
+}
+
+bl {
+    area_name "Blood Basin"
+    tile_graphics Tilesalt
+    overlay_graphics Overlayscomplex
+    background_graphics hellbg
+    foreground_graphics None
+    fx_shader reflectionripples
+    fx_shader_mid distortionparticles
+    palette 3
+    
+    music sallyport.ogg
+    ambience flesh.ogg
+    
+    music_volume .75
+    ambience_volume 2
+    
+    tile_particle_1 drip
+    tile_particle_2 splash
+    
+    npc_1 CryingNPC
+    npc_2 WetFloorNPC
+    npc_3 BruiseNPC
+    decoration_1 Decoration0
+    decoration_2 Decoration1
+    decoration_3 inst10
+
+    fx_shader_mid lighting
+    midfx_graphics ShadeBox
+    midfx_layer 2
+    shader_param .6
+    
+    area_type normal
+
+    art_alts [
+        [OrbSmall, orbblob]
+        [ChainLink2, None]
+    ]
+}
+
+ttu {
+	area_name "Two Thousand Tumors Under"
+	area_label_frame 0
+	tile_graphics Tileradmarsh
+        overlay_graphics Overlaysgrass
+	background_graphics bgmarsh
+        fx_shader distortionparticles
+
+	palette 4
+
+        ambience rain.ogg
+	
+	toxic_timer 0.1
+	player_physics "data/gliding/playerphysicslow.txt"
+	water_physics "data/gliding/playerphysics_waterslow.txt"
+	lowgrav_physics "data/gliding/playerphysics_highgravity.txt"
+	
+	tile_particle_1 drip
+        tile_particle_2 splash
+        global_particle_1 fgrain
+        global_particle_2 bgrain
+        global_particle_3 distortrain
+
+        decoration_1 DecoFern
+        decoration_2 LeafUp
+        decoration_3 LeafDown
+
+        fx_shader_mid lighting
+        midfx_graphics ShadeBox
+        midfx_layer 2 
+        shader_param 1
+      
+        npc_1 GlideNPC
+
+        0 {
+        player_physics "data/playerphysics.txt"
+        background_graphics bgmarsh
+    }
+
+        1 {
+        background_graphics bgmarsh
+    }
+      
+        2 {
+        background_graphics bgmarsh
+    }
+
+        3 {
+        background_graphics hellbg
+        shader_param .7
+    }
+
+
 }
 
 

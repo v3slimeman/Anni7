@@ -41,6 +41,16 @@ BruiseNPC {
     ]
 }
 
+GlideNPC {
+#basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        "i havent seen \na bird in \nso long . . ."
+        "pretty please, \ncould you glide \nfor me?"
+    ]
+}
+
 NPCH4 {
 #basic sideways
     movieclip NPCH4
@@ -56,10 +66,7 @@ NPCH4 {
     ]
     
     alt_text [
-        "\n. . ."
-        "\ngrumble"
-        "\ngrumble"
-        "\n. . ."
+        "\nthousand tumors\nunder by \nv3slimeman"
     ]
 }
 
