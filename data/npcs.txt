@@ -3,8 +3,22 @@ TestNPC {
     movieclip NPC0
     sound_id NPCSkull
     text [
-        "we are \nfucked \ndude"
-   
+        "dude what \nthe fuck \nman..."
+    ]
+}
+
+IcicleNPC {
+#basic sideways
+    movieclip NPCFA1
+    sound_id NPCBlob
+    text [
+        ". . . \nYOU."
+        "get back here, \nyou little shit. \nthis isnt over."
+        "youre fucking dead, \nkid. im an elite\nsniper with over"
+        "500 confirmed kills. \nhand over that \nkey and maybe,"
+        "just maybe, i \nwont recapitate \nmyself and wipe"
+        "your sorry ass \noff of the face\nof the earth."
+        ". . . \nplease . . . ?"   
     ]
 }
 
@@ -66,7 +80,7 @@ NPCH4 {
     ]
     
     alt_text [
-        "\nthousand tumors\nunder by \nv3slimeman"
+        "thousand tumors\nunder by \nv3slimeman"
     ]
 }
 
