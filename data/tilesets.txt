@@ -121,11 +121,12 @@ ttu {
 	area_label_frame 0
 	tile_graphics Tileradmarsh
         overlay_graphics Overlaysgrass
-	background_graphics bgmarsh
+	background_graphics hellbg
         fx_shader distortionparticles
 
 	palette 4
 
+        music fearoftheunknown.ogg
         ambience rain.ogg
 	
 	toxic_timer 0.1
@@ -135,9 +136,6 @@ ttu {
 	
 	tile_particle_1 drip
         tile_particle_2 splash
-        global_particle_1 fgrain
-        global_particle_2 bgrain
-        global_particle_3 distortrain
 
         decoration_1 DecoFern
         decoration_2 LeafUp
@@ -149,23 +147,61 @@ ttu {
         shader_param 1
       
         npc_1 GlideNPC
+        npc_2 IcicleNPC
+
+        art_alts [
+        [Sentry, ThwompSentry]
+        ]
 
         0 {
         player_physics "data/playerphysics.txt"
         background_graphics bgmarsh
+        music none
+        global_particle_1 fgrain
+        global_particle_2 bgrain
+        global_particle_3 distortrain
     }
 
         1 {
         background_graphics bgmarsh
+        music none
+        global_particle_1 fgrain
+        global_particle_2 bgrain
+        global_particle_3 distortrain
     }
       
         2 {
         background_graphics bgmarsh
+        global_particle_1 fgrain
+        global_particle_2 bgrain
+        global_particle_3 distortrain
     }
 
         3 {
-        background_graphics hellbg
         shader_param .7
+        global_particle_1 fgrain
+        global_particle_2 bgrain
+        global_particle_3 distortrain
+    }
+
+        4 {
+        shader_param .6
+        ambience_volume .8
+    }
+
+        5 {
+        shader_param .6
+        ambience_volume .8
+    }
+
+        6 {
+        shader_param .55
+        ambience_volume .8
+    }
+
+        7 {
+        shader_param .55
+        ambience_volume .8
     }
 
 
