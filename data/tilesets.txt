@@ -429,5 +429,19 @@ fa {
 	[ChainLink2, None]
 	#[ChainLink2, BalloonLink2]
 	]
+}
+
+finxx {
+	area_name "The Quarry"
+	area_label_frame 3
 	
+	tile_graphics Tilequarry
+	overlay_graphics Overlayscomplex
+
+	palette 20
+	
+	art_alts [
+		[GlowShroomSmall, Lever1]
+		[GlowShroom, Lever2]
+	]
 }
