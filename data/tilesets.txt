@@ -207,4 +207,18 @@ ttu {
 
 }
 
-
+finxx {
+	area_name "Chemical Plant"
+	area_label_frame 3
+	
+	tile_graphics Tilesalt
+	overlay_graphics Overlayscomplex
+	
+	background_graphics field2bg
+	
+	global_particle_1 wind
+	global_particle_2 rocks2
+	global_particle_3 cloudwind
+	
+	palette 20
+}
