@@ -437,6 +437,14 @@ finxx {
 	
 	tile_graphics Tilequarry
 	overlay_graphics Overlayscomplex
+	
+	background_graphics field2bg
+	
+	global_particle_1 wind
+	global_particle_2 rocks2
+	global_particle_3 cloudwind
+	
+	decoration_1 ChainLink3
 
 	palette 20
 	
