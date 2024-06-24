@@ -1,6 +1,51 @@
 "ttu-0" {name="0 Tumors Under" id=-1}
 "ttu-1" {name="1 Tumor Under" id=-1}
 "ttu-2" {name="2 Tumors Under" id=-1}
+"ttu-3" {name="300 Tumors Under" id=-1}
+"ttu-4" {name="400 Tumors Under" id=-1}
+"ttu-5" {name="500 Tumors Under" id=-1}
+"ttu-6" {name="600 Tumors Under" id=-1}
+"ttu-7" {name="700 Tumors Under" id=-1}
+
+"sc-1" {name="???" id=1}
+"sc-2" {name="???" id=1}
+"sc-3" {name="???" id=1}
+"sc-4" {name="Soul Catalyst 1" id=1}
+"sc-5" {name="Soul Catalyst 2" id=1}
+"sc-6" {name="Soul Catalyst 3" id=1}
+"sc-7" {name="Soul Catalyst 4" id=1}
+"sc-8" {name="Soul Catalyst 5" id=1}
+"sc-9" {name="Soul Catalyst 6" id=1}
+"sc-10" {name="Soul Catalyst 7" id=1}
+"sc-11" {name="Soul Catalyst 8" id=1}
+"sc-12" {name="Soul Catalyst 9" id=1}
+"sc-13" {name="Soul Catalyst 10" id=1}
+"sc-14" {name="Soul Catalyst 11" id=1}
+"sc-15" {name="Soul Catalyst 12" id=1}
+"sc-16" {name="Soul Catalyst 13" id=1}
+"sc-17" {name="Soul Catalyst 14" id=1}
+"sc-18" {name="Soul Catalyst 15" id=1}
+"sc-19" {name="Soul Catalyst" id=1}
+"sc-20" {name="Soul Catalyst" id=1}
+"sc-xu1" {name="???" id=1}
+"sc-xu2" {name="???" id=1}
+"sc-xu3" {name="???" id=1}
+
+"fa-1" {name="Frozen Abyss 1" id=-1}
+"fa-2" {name="Frozen Abyss 2" id=-1}
+"fa-3" {name="Frozen Abyss 3" id=-1}
+"fa-4" {name="Frozen Abyss 4" id=-1}
+"fa-5" {name="Frozen Abyss 5" id=-1}
+"fa-6" {name="Frozen Abyss 6" id=-1}
+"fa-7" {name="Frozen Abyss 7" id=-1}
+"fa-8" {name="Frozen Abyss 8" id=-1}
+"fa-9" {name="Frozen Abyss 9" id=-1}
+"fa-10" {name="Frozen Abyss 10" id=-1}
+"fa-11" {name="Frozen Abyss 11" id=-1}
+"fa-12" {name="Frozen Abyss 12" id=-1}
+"fa-13" {name="Frozen Abyss 13" id=-1}
+"fa-14" {name="Frozen Abyss 14" id=-1}
+"fa-15" {name="Frozen Abyss 15" id=-1}
 
 "1-0" {name="The End 0" id=-1}
 "1-1" {name="The End 1" id=1} #life

@@ -7,22 +7,7 @@ TestNPC {
     ]
 }
 
-IcicleNPC {
-#basic sideways
-    movieclip NPCFA1
-    sound_id NPCBlob
-    text [
-        ". . . \nYOU."
-        "get back here, \nyou little shit. \nthis isnt over."
-        "youre fucking dead, \nkid. im an elite\nsniper with over"
-        "500 confirmed kills. \nhand over that \nkey and maybe,"
-        "just maybe, i \nwont recapitate \nmyself and wipe"
-        "your sorry ass \noff of the face\nof the earth."
-        ". . . \nplease . . . ?"   
-    ]
-}
-
-CryingNPC {
+NPCBA1 {
 #upside down crying
     movieclip NPCBA1
     sound_id NPCBlob
@@ -37,7 +22,7 @@ CryingNPC {
     ]
 }
 
-WetFloorNPC {
+NPCBA2 {
 #wet floor sign
     movieclip NPCBA2
     sound_id none
@@ -46,8 +31,8 @@ WetFloorNPC {
     ]
 }
 
-BruiseNPC {
-#wet floor sign
+NPCBA3 {
+#bruise the giant
     movieclip NPCBA3
     sound_id none
     text [
@@ -65,22 +50,152 @@ GlideNPC {
     ]
 }
 
-NPCH4 {
+CaretakerNPC {
+    movieclip NPC16
+    sound_id NPCSkull
+    text [
+	"\noh . . ."
+	"this place is not\nfor your kind."
+        "your spirit will\nnot be spared."
+        "your resolve will\nbe whisked away."
+        "your life will\ncease to exist.\n. . ."
+        "little lamb\n. . ."
+    ]
+}
+
+FlightNPC {
+    movieclip NPCG3
+    sound_id NPCGhost
+    text [
+	"\ncan you feel it?"
+	"your soul being\ndrawn towards\n. . ."
+	"SPIRITUAL\nANNIHILATION!"
+	"\n. . ."
+	"while in the air,\ntry diving!"
+	"you'll give into the\nfeeling and ascend!"
+	"it may feel\nstrange at first\n. . ."
+	"but with time\nitll be second\nnature . . ."
+	"\nwink wink!"
+	]
+}
+
+SecretTinnitusNPC {
+    movieclip NPCG6
+    sound_id NPCGhost
+    text [
+	". . .\nthe bell\n. . ."
+	"it calls out to us \n. . ."		
+        "from far and wide,\neven if we hide"
+	"its faint ringing\ncan still be heard\n. . ."
+	"ever present hope\n. . .\nin a hopeless world"
+	"\n. . ."
+	"you can hear\nit too?"
+	"\n. . ."
+	"\nmust be tinnitus..."
+	]
+}
+
+SecretBellDenierNPC {
+    movieclip NPC6
+    sound_id NPCSkull
+    text [
+	"\nhuh?"
+	"what are you\ndoing here?"
+	"whats this about\na bell?"
+	"we never had\na bell."
+	"\n. . ."
+	"\ntake my advice"
+	"grab a seat\nsomewhere and\nenjoy the view"
+	"at least while\ntheres still a\nview to enjoy..."
+	]
+}
+
+NonexistentNPC {
+    movieclip NPCG1
+    sound_id NPCGhost
+    text [
+	"almost there\n. . ."
+	"just have to get\nto the top of\nthis tower"
+	"then i'll no\nlonger exist!"
+	"I'll forget all\nof the stuff I've\ndone and seen..."
+	"nothingness\n. . ."
+	"just like how it\nwas before I was born!"
+	]
+}
+
+QuitterNPC {
+    movieclip NPCG4
+    sound_id NPCGhost
+    text [
+	"\n. . ."
+	"I can't do it\n. . ."
+	"I came all this way\n. . ."
+	"\n. . ."
+	"I don't want to\nbe gone . . ."
+	"I like being me\n. . ."
+	"I don't want to\nnot exist . . ."
+	"\n. . ."
+	"even after the\nworld ends . . ."
+	"I still want to\nbe in it . . ."
+	"\n. . ."
+	"what is wrong\nwith me?"
+	]
+}
+
+NPCFA1 {
 #basic sideways
+    movieclip NPCFA1
+    sound_id NPCBlob
+    text [
+        "you . . . \nFUCKER."
+        "that key is \nmine! i called \ndibs!"
+        "youre dead, kid. im\n a fucking Abyss\n belt in Krav Maga"
+        "and if you touch \nthat trinket ill \ndevolve you into"
+        "a goddamn newt. \nyou are so \nFUCKED."
+        "fuck, i might \neven do a backflip \nor something."
+        "as soon as i \ngather enough chi \nto recapitate,"
+        "YOU\nARE\nDONE!"
+        "\n. . ."
+        "just . . .\ngive it to me\n. . ." 
+    ]
+}
+
+NPCH1 {
+#portal
     movieclip NPCH4
     sound_id NPCSteven
     text [
-        "guh . .\n\nguh . ."
-        "i\nhunger\n. . ."
-        "\n300. . ."
-        "must\nbe\nblood"
-        "must\nbe\nfresh"
-        "\n. . ."
-        "\nfeed me . . ."
+        "banana man"
     ]
     
     alt_text [
         "thousand tumors\nunder by \nv3slimeman"
+    ]
+}
+
+NPCH2 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "here he comes on the white hot sand"
+    ]
+    
+    alt_text [
+        "soul catalyst \nby therotbot"
+    ]
+}
+
+NPCH3 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "give me some for all me friends"
+    ]
+    
+    alt_text [
+        "frozen abyss \nby yves"
     ]
 }
 

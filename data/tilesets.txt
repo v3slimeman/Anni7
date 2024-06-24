@@ -18,7 +18,7 @@
     global_particle_1 wind2
     global_particle_2 wind
     
-    npc_1 NPCH4
+    npc_1 NPCH1
     npc_2 NPC1
     npc_3 NPC2
     decoration_1 MyGrass
@@ -34,12 +34,14 @@
     ]
 
     2 {
+        npc_1 NPCH2
         art_alts [
         [Floater, WeHaveIt]
         ]
     }
 
     3 {
+        npc_1 NPCH3
         decoration_3 grassfg2
     }
 }
@@ -96,9 +98,8 @@ bl {
     tile_particle_1 drip
     tile_particle_2 splash
     
-    npc_1 CryingNPC
-    npc_2 WetFloorNPC
-    npc_3 BruiseNPC
+    npc_1 NPCH2
+
     decoration_1 Decoration0
     decoration_2 Decoration1
     decoration_3 inst10
@@ -147,78 +148,286 @@ ttu {
         shader_param 1
       
         npc_1 GlideNPC
-        npc_2 IcicleNPC
 
         art_alts [
         [Sentry, ThwompSentry]
         ]
 
         0 {
-        player_physics "data/playerphysics.txt"
-        background_graphics bgmarsh
-        music none
-        global_particle_1 fgrain
-        global_particle_2 bgrain
-        global_particle_3 distortrain
+          player_physics "data/playerphysics.txt"
+          background_graphics bgmarsh
+          music none
+          global_particle_1 fgrain
+          global_particle_2 bgrain
+          global_particle_3 distortrain
     }
 
         1 {
-        background_graphics bgmarsh
-        music none
-        global_particle_1 fgrain
-        global_particle_2 bgrain
-        global_particle_3 distortrain
+          background_graphics bgmarsh
+          music none
+          global_particle_1 fgrain
+          global_particle_2 bgrain
+          global_particle_3 distortrain
     }
       
         2 {
-        background_graphics bgmarsh
-        global_particle_1 fgrain
-        global_particle_2 bgrain
-        global_particle_3 distortrain
+          background_graphics bgmarsh
+          global_particle_1 fgrain
+          global_particle_2 bgrain
+          global_particle_3 distortrain
     }
 
         3 {
-        shader_param .7
-        global_particle_1 fgrain
-        global_particle_2 bgrain
-        global_particle_3 distortrain
+          shader_param .7
+          global_particle_1 fgrain
+          global_particle_2 bgrain
+          global_particle_3 distortrain
     }
 
         4 {
-        shader_param .6
-        ambience_volume .8
+          shader_param .6
+          ambience_volume .8
     }
 
         5 {
-        shader_param .6
-        ambience_volume .8
+          shader_param .6
+          ambience_volume .8
     }
 
         6 {
-        shader_param .55
-        ambience_volume .8
+          shader_param .55
+          ambience_volume .8
     }
 
         7 {
-        shader_param .55
-        ambience_volume .8
+          shader_param .55
+          ambience_volume .8
     }
 
 
 }
 
-finxx {
-	area_name "Chemical Plant"
-	area_label_frame 3
+
+
+sc {
+    area_name "Soul Catalyst"
+    tile_graphics Tilecity
+    overlay_graphics Overlaystheglow
+    background_graphics ch3bg
+    foreground_graphics fg1
+    palette 5
+    fx_shader distortionparticles
 	
-	tile_graphics Tilesalt
-	overlay_graphics Overlayscomplex
+    music [FuneralMarchIntro.ogg, FuneralMarch.ogg]
+    ambience BackgroundBellsOnly.ogg
+    
+    music_volume 1
+    ambience_volume .75
+    
+    tile_particle_2 splash
+    global_particle_1 fgrain
+    global_particle_2 bgrain
+    global_particle_3 distortrain
+    
+    npc_1 CaretakerNPC
+    npc_2 FlightNPC
+    npc_3 NonexistentNPC
 	
-	background_graphics field2bg
+    player_physics "data/playerphysics_sc.txt"
+    
+    area_type normal
 	
-	global_particle_1 wind
-	global_particle_2 rocks2
-	global_particle_3 cloudwind
+	1 {
+	  tile_graphics Tilefield
+	  overlay_graphics Overlaysfield
 	
-	palette 20
+	  music BackgroundBellsOnly.ogg
+	  ambience rain.ogg
+	  music_volume .25
+	  ambience_volume .8
+		
+	  player_physics "data/playerphysics.txt"
+	}
+	
+	2 {
+	  tile_graphics Tilefield
+	  overlay_graphics Overlaysfield
+	
+	  music BackgroundBellsOnly.ogg
+	  ambience rain.ogg
+	  music_volume .25
+	  ambience_volume .8
+		
+	  player_physics "data/playerphysics.txt"
+	}
+	
+	3 {
+          music [none, BackgroundBellsOnly.ogg]
+	  ambience rain.ogg
+	  music_volume .25
+	  ambience_volume .8
+		
+	  player_physics "data/playerphysics.txt"
+	}
+	
+	4 {
+	  area_label_frame 3
+	}
+	
+	
+	14 {
+		ambience BackgroundBells.ogg
+		music_volume .8
+		ambience_volume .25
+	}
+	
+	15 {
+		ambience BackgroundBells.ogg
+		music_volume .6
+		ambience_volume .5
+	}
+	
+	16 {
+		ambience BackgroundBells.ogg
+		music_volume .4
+		ambience_volume .5
+                art_alts [
+                [Floater, Ghost][OrbSmall, bulletretro][Sentry, ThwompSentry]
+                ]
+                
+	}
+	
+	17 {
+		ambience BackgroundBells.ogg
+		music_volume .2
+		ambience_volume .75
+                art_alts [
+                [Floater, Ghost][OrbSmall, bulletretro][Sentry, ThwompSentry]
+                ]
+	}
+	
+	18 {
+		ambience BackgroundBells.ogg
+                music_volume 0
+		ambience_volume 1
+                art_alts [
+                [Floater, Ghost][OrbSmall, bulletretro][Sentry, ThwompSentry]
+                ]
+	}
+	
+	19 {
+		background_graphics bgsolid
+	
+		ambience BackgroundBellsLoud.ogg
+                music_volume 0
+		ambience_volume 1.5
+		
+		global_particle_1 none
+		global_particle_2 bgrainBig
+		global_particle_3 rocksBig
+		
+		player_physics "data/playerphysics_sc_slow.txt"
+	}
+	
+	20 {
+		background_graphics neverbg
+		
+		ambience BackgroundBellsLoud.ogg
+                music_volume 0
+		ambience_volume 5
+		
+		global_particle_3 rocks
+		
+		npc_1 QuitterNPC
+
+                art_alts [
+                [Floater, Ghost][OrbSmall, bulletretro][Sentry, ThwompSentry]
+                ]
+	}
+
+	art_alts [
+        [Floater, Ghost][OrbSmall, bulletretro]
+        ]
+
+}
+
+scxu {
+    area_name "Soul Catalyst"
+    tile_graphics Tilecity
+    overlay_graphics Overlaystheglow
+    background_graphics ch3bg
+    foreground_graphics fg1
+    palette 5
+    fx_shader distortionparticles
+	
+    music rain.ogg
+    ambience BackgroundBellsOnly.ogg
+    stop_previous_music false
+    
+    music_volume 1
+    ambience_volume .8
+    
+    tile_particle_2 splash
+    global_particle_1 fgrain
+    global_particle_2 bgrain
+    global_particle_3 distortrain
+
+    npc_1 SecretTinnitusNPC
+    npc_2 SecretBellDenierNPC
+
+    2 {
+    music_volume .6
+    ambience_volume 1.2
+   
+    player_physics "data/playerphysics_sc.txt"
+    }
+  
+    art_alts [
+        [Floater, Ghost][OrbSmall, bulletretro]
+    ]
+}
+
+fa {
+    area_name "Frozen Abyss"
+    area_label_frame 17
+    tile_graphics Tileyves
+    overlay_graphics Overlaystox2
+    background_graphics field2bg
+    foreground_graphics None
+    fx_shader gravripples
+    palette 6
+    
+    decoration_1 chainalone
+    decoration_2 HookBaseFlipped
+    decoration_3 ChainHitchSingle
+
+    music_volume 0.4
+    ambience_volume 1.5
+    music [FrozenAbyss_intro.ogg, FrozenAbyss_main.ogg]
+    ambience wind.ogg
+
+
+    global_particle_1 embers_y
+
+    global_particle_2 leaves
+    global_particle_3 cloudwind_snow
+
+    npc_1 NPCFA1
+
+    area_type normal
+    
+    fx_shader_mid cloudripples
+    midfx_layer 2
+
+    tile_particle_1 dripice
+    tile_particle_2 splashsnow
+    tile_particle_3 smoke
+
+    art_alts [
+	[OrbSmall, dudsawsmall]
+	[OrbLarge, dudsawbig]
+	[ChainLink2, None]
+	#[ChainLink2, BalloonLink2]
+	]
+	
 }
