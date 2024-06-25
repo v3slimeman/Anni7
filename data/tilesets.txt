@@ -445,6 +445,10 @@ finxx {
 	global_particle_3 cloudwind
 	
 	decoration_1 ChainLink3
+	
+	fx_shader_mid quarry
+	midfx_graphics ShadeBox
+	midfx_layer 2
 
 	palette 20
 	
@@ -452,4 +456,8 @@ finxx {
 		[GlowShroomSmall, Lever1]
 		[GlowShroom, Lever2]
 	]
+	
+	4 {
+		shader_param 0.9
+	}
 }
