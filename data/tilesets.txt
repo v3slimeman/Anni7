@@ -461,3 +461,619 @@ finxx {
 		shader_param 0.9
 	}
 }
+
+4c {
+	area_name "Flooded Tunnels"
+	area_label_frame 3
+	tile_graphics Tilehighlands
+	overlay_graphics Overlayshell
+	background_graphics bg_enana1
+	foreground_graphics None
+	palette 6
+
+    fx_shader reflectionripples
+	fx_shader_mid lightingmodded2
+	midfx_graphics ShadeBox
+	midfx_layer 2
+	shader_param .4
+	
+	tile_particle_1 waterfall
+	tile_particle_2 waterfall_splash
+	tile_particle_3 bubbles
+	tile_particle_4 waterfall2
+	tile_particle_5 drip
+	
+	decoration_1 TileToxDeco1
+	
+	npc_1 NPC_mines_1
+	npc_2 NPC_mines_3
+	npc_3 NPC_mines_4
+			
+	global_particle_1 fog_light
+	global_particle_2 bgrain
+	global_particle_3 cold
+	
+    art_alts [
+		[Fish, Fish2]
+        [OrbSmall, orbblob]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	
+	lowgrav_physics "data/playerphysics_lowgrav_test.txt"
+	
+	music [winter_intro.ogg, winter_loop.ogg]
+	ambience wet_caves.ogg
+	ambience_volume 1.2
+	
+	0 {
+	    global_particle_3 fgrain
+    	shader_param .7
+		tile_particle_2 drip
+		tile_particle_3 toxicdump_left
+		tile_particle_5 splash
+    	ambience rain.ogg
+		
+		music none
+		
+        art_alts [
+		[Fish, Fish2]
+        [OrbSmall, nothing]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	}
+	
+	0x {
+	    global_particle_3 fgrain
+    	shader_param .7
+		tile_particle_2 drip
+		tile_particle_3 toxicdump_left
+		tile_particle_5 splash
+    	ambience rain.ogg
+		
+		npc_1 NPC_mines_1x
+		
+		music_volume 0.7
+		
+        art_alts [
+		[Fish, Fish2]
+        [OrbSmall, nothing]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	}
+	
+	1 {
+	    sfx_file mutebuttons.txt
+		ambience flowing_water.ogg
+    	shader_param .5
+		
+		music none
+		
+        art_alts [
+		[Fish, Fish2]
+        [OrbSmall, nothing]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	}
+	
+	1x {
+	    sfx_file mutebuttons.txt
+		ambience flowing_water.ogg
+    	shader_param .5
+		
+		decoration_2 JarDeco
+
+		music_volume 0.7
+		
+        art_alts [
+		[Fish, Fish2]
+        [OrbSmall, nothing]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	}
+	
+	2 {
+		ambience flowing_water.ogg
+	}
+	
+	2x {
+		ambience flowing_water.ogg
+        background_graphics bgsolid
+		
+		music_volume 0.7
+		
+		tile_particle_3 surface_splash
+		global_particle_2 none
+	
+		shader_param .2
+	}
+	
+	3 {
+		ambience underwater.ogg
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	}
+	
+	3x {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		music_volume 0.7
+		
+		global_particle_2 none
+	}
+	
+	4 {
+		ambience underwater.ogg
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .3
+	}
+	
+	4x {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .3
+	}
+	
+	4x2 {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		music_volume 0.7	
+		
+		global_particle_2 none
+	
+		shader_param .3
+	}
+	
+	5 {
+		ambience underwater.ogg
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .2
+	}
+	
+	5x {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .2
+	}
+	
+	6 {
+		ambience underwater.ogg
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .3
+	}
+	
+	6x {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .3
+	}
+	
+	7 {
+    	ambience_volume 1.2
+        background_graphics bgsolid
+		
+		global_particle_2 none
+	
+		shader_param .2
+	}
+	
+	8 {
+	   shader_param 0.5
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	}
+	
+	9 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	}
+	
+	10 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	}
+	
+	11 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	}
+	
+	12 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	}
+	
+	12t {
+	   shader_param 0.5
+	   tile_graphics Tileradtower
+	   
+	    art_alts [
+		[Fish, Fish2]
+        [OrbSmall, orbblob][Hopper, loading_animation]
+    ]
+	
+	   decoration_1 loading_animation
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+
+	12t2 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   
+	    art_alts [
+		[Fish, Fish2]
+        [OrbSmall, orbblob][Hopper, loading_animation2]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	
+	   decoration_1 loading_animation2
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	global_particle_3 fgrain2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	12t3 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+
+	13 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	
+	14 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	15 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}	
+	
+	16 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	17 {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	17t {
+	   background_graphics bg_enana2
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	global_particle_1 cloudwind_heavy2
+	global_particle_2 storm2
+	
+	   npc_1 NPC_mines_5
+	   
+	   tile_particle_2 drip
+	   tile_particle_3 smoke_windr2
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   ambience rain.ogg
+	   
+	   sfx_file mutebuttons.txt
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+	
+	17t2 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_1 loading_animation2
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	   tile_particle_2 drip
+	   tile_particle_3 smoke
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   music_volume 0.7
+	   ambience rain.ogg
+	   
+	   sfx_file mutebuttons.txt
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}	
+
+	18 {
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_1 NPC_en6_dead
+	   decoration_2 DecoWire
+	   decoration_3 trackdeco
+	   
+	   tile_particle_2 drip
+	   tile_particle_3 smoke
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   music_volume 0.7
+	   ambience rain.ogg
+	   
+	   sfx_file mutebuttons.txt
+	   
+       platform_physics "data/platformphysics_mines.txt"
+	}
+}
+
+4cx {
+	area_name "Flooded Tunnels"
+	area_label_frame 3
+	tile_graphics Tilehighlands	
+	overlay_graphics Overlayshell
+	background_graphics bgsolid
+	foreground_graphics None
+	palette 6
+
+    fx_shader reflectionripples
+	fx_shader_mid lightingmodded2
+	midfx_graphics ShadeBox
+	midfx_layer 2
+	shader_param .1
+	
+	tile_particle_1 waterfall
+	tile_particle_2 waterfall_splash
+	tile_particle_3 bubbles
+	tile_particle_4 waterfall2
+	tile_particle_5 drip
+	
+	decoration_1 TileToxDeco1
+	decoration_2 CreepingMass
+	
+	npc_1 NPC_mines_2
+			
+	global_particle_1 fog_light
+	global_particle_2 cold
+	
+    art_alts [
+		[Fish, Fish2]
+        [OrbSmall, orbblob]
+		[ThwampEye, ThwampEye_Block]
+    ]
+	
+	lowgrav_physics "data/playerphysics_lowgrav_test.txt"
+	
+	music [hmk_secret_intro.ogg, hmk_secret_loop.ogg]
+	stop_previous_music false
+	ambience wet_caves.ogg
+	ambience_volume 1.2
+	
+	2 {
+	    art_alts [
+		[Fish, Fish2]
+        [OrbSmall, nothing]
+		[ThwampEye, ThwampGear_big]
+    ]
+	}	
+	
+	4 {
+	shader_param .2
+	}
+	
+	5 {
+	   palette 7
+
+	   background_graphics bg_enana1
+	
+	   shader_param 0.7
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_2 bgrain
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+       music [gymnopedies_intro.ogg, gymnopedies_loop.ogg]
+	   ambience rain.ogg
+	}
+	
+	6 {
+	   palette 7
+
+	   background_graphics bg_enana1
+	
+	   shader_param 0.6
+	   tile_graphics Tileradtower
+	   decoration_2 DecoWire
+	   
+	   global_particle_2 bgrain
+	   global_particle_3 fgrain
+	   
+	   tile_particle_2 drip
+	   tile_particle_4 waterfall2
+	   tile_particle_5 splash
+	   
+	   music [gymnopedies_intro.ogg, gymnopedies_loop.ogg]	   
+	   ambience rain.ogg
+	}
+}

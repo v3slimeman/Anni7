@@ -1,107 +1,5107 @@
+debris {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [.3,1]
+	emit_amount [1,4]
+	emit_direction [0, -1]
+	emit_spread 30
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed 5
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -15]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_tile]
+}
+
+debris_meat {
+	movieclip soliddrip2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [1,2]
+	emit_amount [2,4]
+	emit_direction [1, 0]
+	emit_box [1, 1]
+	emit_offset [-.5,0]
+	emit_spread 15
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed 5
+	initial_rotation [-160,-200]
+	rotation_speed [0,0]
+	force [0,0]
+	friction 1
+	size_start 2
+	size_end 1
+	alpha_start 1
+	alpha_end .2
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_tile]
+}
+
+debris_l {
+	inherit debris
+	
+	emit_direction [-1, 0]
+	emit_offset [0.5, 0]
+	force [-15, -3]
+}
+
+debris_r {
+	inherit debris
+	
+	emit_direction [1, 0]
+	emit_offset [-0.5, 0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	force [15, -3]
+}
+
+debris_slow {
+	inherit debris
+	
+	emit_rate [.3,.5]
+	emit_spread 20
+	size_start 0.7
+	size_end 0.7
+	force [0, -6]
+}
+
+debris_slow_wr {
+	inherit debris
+	
+	emit_rate [.3,.5]
+	size_start 0.7
+	size_end 0.7
+	force [2, -6]
+}
+
+debris_slow_wl {
+	inherit debris
+	
+	emit_rate [.3,.5]
+	size_start 0.7
+	size_end 0.7
+	force [-2, -6]
+}
+
+debris_wr {
+	inherit debris
+	
+	emit_rate [.3,.5]
+	size_start 0.7
+	size_end 0.7
+	force [4, -7]
+}
+
+debris_wl {
+	inherit debris
+	
+	emit_rate [.3,.5]
+	size_start 0.7
+	size_end 0.7
+	force [-4, -7]
+}
+
+cloudwind_light_tall {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 102, -10, 70]
+	prewarm [20,24]
+	batched true
+	
+	#emitter properties
+	emit_rate 13
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,54]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [5, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .012 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+drip_hitwater {
+	#system properties
+	movieclip soliddrip
+	max_particles 250
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [.2,1]
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]
+	emit_offset [0,.5]
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed 5
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction 1
+	size_start [1,1.5]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.12
+	inherit_speed 0
+	tags [collide_tile, collide_water]
+}
+
+fgrain_hitwater {
+	#system properties
+	movieclip soliddrip
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 20
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [60, 100]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.3,.45]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags [collide_tile, collide_water]
+}
+
+fog {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [30,20]
+	batched true
+	
+	#emitter properties
+	emit_rate 14
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [8.5]
+	initial_speed [7, 8]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [2,6.5]
+	size_end  1
+	alpha_start .030 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+fog_light {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [30,20]
+	batched true
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [9]
+	initial_speed [7, 8]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [2,6.5]
+	size_end  1
+	alpha_start .030 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+fog_slow {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-15, 64, -15, 42]
+	prewarm [160, 20]
+	batched true
+	
+	#emitter properties
+	emit_rate 3
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 2
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-15,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 120
+	initial_speed [2, 0]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,3]
+	size_end  1
+	alpha_start .036 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+waterfall2 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 70
+	emit_amount 3
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 2
+	initial_speed [30, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -250]
+	friction [.8, .9]
+	size_start .7
+	size_end .7
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .2
+	inherit_speed 0
+	tags [collide_water]
+}
+
+goldian_embers {
+	#system TestParticle
+	movieclip spark2
+	max_particles 300
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 15
+	emit_amount 6
+	emit_direction [0, 1]
+	emit_spread 10
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [1, 3]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -1]
+	friction 1
+	size_start [.3,.9]
+	size_end [.1,.4]
+	alpha_start [.1,.65]
+	alpha_end [.1,.65]
+	face_moving_direction true
+	speed_scale 0.3
+	inherit_speed 0
+	tags []
+}
+
+desolate_wind {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,24]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [35, 100]
+	initial_rotation 8
+	rotation_speed 4
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .012 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+creepy_lightning {
+	#system properties
+	movieclip Lightning
+	max_particles 20
+	layer 0
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [.15,.5]
+	emit_amount 1
+	emit_direction [0, 0]
+	emit_spread 360
+	emit_box [54, 10]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,24]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.2, .5]
+	initial_speed 0
+	initial_rotation [-20, 20]
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [.5, 3]
+	size_end  1
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags [lightning_flash]
+}
+
+fallout3_windR {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 500
+	emit_amount 1
+	emit_direction [0.5, -1]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [0, 4]
+	initial_rotation [0,-360]
+	rotation_speed [200, -200]
+	force [0, -.5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fallout3Lwind {
+	#system properties
+	movieclip Leaf2
+	max_particles 2500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [40,24]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 2
+	emit_direction [-.2, -1]
+	emit_spread 20
+	emit_box [154, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [8, -.5]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force [-2, .1]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fallout3R {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 1
+	emit_direction [-.2, -1]
+	emit_spread 20
+	emit_box [84, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [-2, -4]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force [.5, .5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fallout3L {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 1
+	emit_direction [-.2, -1]
+	emit_spread 20
+	emit_box [84, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [2, -4]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force [-.5, .5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+
+fallout3 {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 500
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [0, 4]
+	initial_rotation [0,-360]
+	rotation_speed [200, -200]
+	force [0, -.5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push, collide_tile]
+}
+
+storm {
+	combo[bgrain, lightning]
+}
+
+mist3 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 2000
+	layer 7
+	livebounds [-30, 84, -30, 62]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 120
+	emit_amount 5
+	emit_direction [0, -1]
+	emit_spread 20
+	emit_box [128, 84]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,4]
+	initial_speed [0,2.5]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction .99
+	size_start [.0125]
+	size_end  [200,400]
+	alpha_start 0.8 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+hpxbean_fgfallingleaves {
+	#system properties
+	movieclip Leaf2
+	max_particles 100
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 1
+	emit_direction [0, -0.5]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 150
+	initial_speed [3, 3]
+	initial_rotation [0,360]
+	rotation_speed [-130, 130]
+	force 0
+	friction 1
+	size_start [1,1.5]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+hpxbean_bgfallingleaves {
+	#system properties
+	movieclip Leaf2
+	max_particles 100
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 1
+	emit_direction [0, -0.5]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+fishfly {
+	#system properties
+	movieclip MiniFish
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 15
+	emit_amount 1
+	emit_direction [0, 1]
+	emit_spread 0
+	emit_box [45, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 120
+	initial_speed [0, 14]
+	initial_rotation 0
+	rotation_speed [0,0]
+	force [0, 14]
+	friction [.95, .959]
+	size_start [2,2]
+	size_end  [1,1]
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+fishfloat {
+	#system TestParticle
+	movieclip MiniFish
+	max_particles 200
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 2
+	emit_direction [0, 1]
+	emit_spread 20
+	emit_box [54, 16]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 80
+	initial_speed [.3, 1.5]
+	initial_rotation [0,360]
+	rotation_speed [-30, 30]
+	force 0
+	friction 1
+	size_start 2
+	size_end 1
+	alpha_start 0.5
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fishjet {
+	#system properties
+	movieclip MiniFish
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 5
+	emit_amount [0,1]
+	emit_direction [0, 1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 120
+	initial_speed [0, 2.5]
+	initial_rotation 0
+	rotation_speed [-10,10]
+	force [0, 3.5]
+	friction [.95, .959]
+	size_start [1,1]
+	size_end  [1,1]
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push, collide_tile]
+}
+
+frontrocks
+{
+	# SYSTEM PROPERTIES
+	movieclip Rock2
+	max_particles 200
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	prewarm [20, 48]
+	batched true
+
+	# EMITTER PROPERTIES
+	emit_rate 2
+	emit_amount 2
+	emit_direction [0, 1]
+	emit_spread 20
+	emit_box [54, 16]
+	emit_offset [27, 0]
+
+	# ANIMATION PROPERTIES
+	particle_lifetime 80
+	initial_speed [0.3, 1.5]
+	initial_rotation [0, 360]
+	rotation_speed [-30, 30]
+	force 0
+	friction 1
+	size_start [0.75, 1.25]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+toxicsparkle
+{
+	# SYSTEM PROPERTIES
+	movieclip MiniWisp
+	maxparticles 400
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	batched true
+
+	# EMITTER PROPERTIES
+	emit_rate [0.2, 15]
+	emit_amount [1, 2]
+	emit_direction [0, 1]
+	emit_spread 0
+	emit_box [1, 1]
+	emit_offset [0, 0]
+
+	# ANIMATION PROPERTIES
+	particle_lifetime [1, 4.5]
+	initial_speed [0.5, 1.25]
+	initial_rotation [0, 360]
+	rotation_speed [5, 20]
+	force [0, 0.5]
+	friction 1
+	size_start [0.25, 1]
+	size_end [0.05, 0.5]
+	alpha_start [0.25, 1]
+	alpha_end 0
+	face_moving_direction false
+	speed_scale [0, 0]
+	inherit_speed [0, 0]
+	tags []
+}
+
+waterfall_splash_offset
+{
+	combo [waterfall_splash_top_offset, waterfall_splash_bottom_offset]
+}
+
+waterfall_splash_top_offset
+{
+	# SYSTEM PROPERTIES
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+
+	# EMITTER PROPERTIES
+	emit_rate 60
+	emit_amount 4
+	emit_direction [0, 1]
+	emit_spread 70
+	emit_box [1.5, 0]
+	emit_offset [0, 2.5]
+
+	# ANIMATION PROPERTIES
+	particle_lifetime 0.5
+	initial_speed [5, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction 1
+	size_start 1.5
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.1
+	inherit_speed 1
+	tags [collide_water]
+}
+
+waterfall_splash_bottom_offset
+{
+	# SYSTEM PROPERTIES
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+
+	# EMITTER PROPERTIES
+	emit_rate 60
+	emit_amount 4
+	emit_direction [0, -1]
+	emit_spread 30
+	emit_box [1.5, 0]
+	emit_offset [0, 2.4]
+
+	# ANIMATION PROPERTIES
+	particle_lifetime 1
+	initial_speed [10, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 50]
+	friction [0.85, 0.8]
+	size_start [1, 3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_air, player_push_strong]
+}
+
+	#particle animation properties
+	particle_lifetime 150
+	initial_speed [2, 2]
+	initial_rotation [0,360]
+	rotation_speed [-100, 100]
+	force 0
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 0.8
+	alpha_end 0.8
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
 
 #particle system name (referenced in-game)
 sample {
-    #system properties
-    movieclip TestParticle         #particle movieclip linkage name. frame 1 = alive particle, frame 2 = "on death" animation
-    max_particles 250      #max particles on screen at once
-    layer 1                #0 = behind background tiles, 1 = behind player, 2 = in front, 3 = in front of tiles, 4 = in front of water, 5 = upper distortion layer, 6 = lower distortion layer, 7 = blurred foreground layer
-    livebounds [-10, 64, -10, 42] #bounding box coords for when particles get destroyed off-screen. should not need to change. minx, maxx, miny, maxy
-    prewarm [0,0] #for global particles, first value is number of iterations to prewarm, second value is time scale for each step
-    batched false #delays the particles rendering by a frame (or more). use on systems with lots of particles for a performance boost if the frame delay is okay (should be fine for anything that doesnt interact with the player, like global particle effects)
-    
-    #emitter properties
-    emit_rate [30,30]            #how often to emit particles. 10 = 10 per second, [5, 10] = random between 5 and 10 per second. set negative to make it a 1-time burst
-    emit_amount [1,2]          #how many particles to emit per emit-trigger. bracket for a random range
-    emit_direction [0, 1]  #x, y direction to emit particles in
-    emit_spread 45         #angular spread for particle emission (360 for all directions)
-    emit_box [.5, 0]       #initial location randomization box for particles (width, height)
-    emit_offset [0,0]      #x, y offsets for where to emit particles from
+	#system properties
+	movieclip TestParticle		 #particle movieclip linkage name. frame 1 = alive particle, frame 2 = "on death" animation
+	max_particles 250	  #max particles on screen at once
+	layer 1				#0 = behind background tiles, 1 = behind player, 2 = in front, 3 = in front of tiles, 4 = in front of water, 5 = upper distortion layer, 6 = lower distortion layer, 7 = blurred foreground layer
+	livebounds [-10, 64, -10, 42] #bounding box coords for when particles get destroyed off-screen. should not need to change. minx, maxx, miny, maxy
+	prewarm [0,0] #for global particles, first value is number of iterations to prewarm, second value is time scale for each step
+	batched false #delays the particles rendering by a frame (or more). use on systems with lots of particles for a performance boost if the frame delay is okay (should be fine for anything that doesnt interact with the player, like global particle effects)
+	
+	#emitter propertiesfal
+	emit_rate [30,30]			#how often to emit particles. 10 = 10 per second, [5, 10] = random between 5 and 10 per second. set negative to make it a 1-time burst
+	emit_amount [1,2]		  #how many particles to emit per emit-trigger. bracket for a random range
+	emit_direction [0, 1]  #x, y direction to emit particles in
+	emit_spread 45		 #angular spread for particle emission (360 for all directions)
+	emit_box [.5, 0]	   #initial location randomization box for particles (width, height)
+	emit_offset [0,0]	  #x, y offsets for where to emit particles from
 
-    #particle animation properties
-    particle_lifetime [.5,1]           #how many seconds a particle lives for (brackets for a random range)
-    initial_speed [5,15]               #particle initial speed (bracket for a random range)
-    initial_rotation [0,360]            #particle initial rotation (bracket for a random range) (ex: [0,360])
-    rotation_speed [-180,180]              #rotating over time (bracket for random range)
-    force [0, -40]                #x, y for a constant force (gravity or wind, etc)
-    friction [1, 1]               #x, y friction parameters
-    size_start [1,1.5]                  #size at start (brackets for a random range)
-    size_end [.5, 0]                   #size at end (brackets for a random range)
-    alpha_start [1,1]                  #size at start (brackets for a random range)
-    alpha_end [1, 1]                   #size at end (brackets for a random range)
-    face_moving_direction false       #false = off, true = on. rotate to match speed. initial_rotation becomes an offset if this is on
-    speed_scale [0,0]             #scales x by speed (best used with face_moving_direction)
-    inherit_speed [0,0]        #particles inherit the speed of their emitter (emitter speed is multiplied by this value)
-    tags [collide_tile, collide_water, bounce_tile, collide_air] #tags exposed to the engine [collide_tile, collide_water, collide_air (for bubbles)]
+	#particle animation properties
+	particle_lifetime [.5,1]		   #how many seconds a particle lives for (brackets for a random range)
+	initial_speed [5,15]			   #particle initial speed (bracket for a random range)
+	initial_rotation [0,360]			#particle initial rotation (bracket for a random range) (ex: [0,360])
+	rotation_speed [-180,180]			  #rotating over time (bracket for random range)
+	force [0, -40]				#x, y for a constant force (gravity or wind, etc)
+	friction [1, 1]			   #x, y friction parameters
+	size_start [1,1.5]				  #size at start (brackets for a random range)
+	size_end [.5, 0]				   #size at end (brackets for a random range)
+	alpha_start [1,1]				  #size at start (brackets for a random range)
+	alpha_end [1, 1]				   #size at end (brackets for a random range)
+	face_moving_direction false	   #false = off, true = on. rotate to match speed. initial_rotation becomes an offset if this is on
+	speed_scale [0,0]			 #scales x by speed (best used with face_moving_direction)
+	inherit_speed [0,0]		#particles inherit the speed of their emitter (emitter speed is multiplied by this value)
+	tags [collide_tile, collide_water, bounce_tile, collide_air] #tags exposed to the engine [collide_tile, collide_water, collide_air (for bubbles)]
 }
 
 drip {
-    #system properties
-    movieclip soliddrip
-    max_particles 250
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [.2,1]
-    emit_amount 1
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]
-    emit_offset [0,.5]
-    
-    #particle animation properties
-    particle_lifetime 5
-    initial_speed 5
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -10]
-    friction 1
-    size_start [1,1.5]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0.12
-    inherit_speed 0
-    tags [collide_tile]
+	#system properties
+	movieclip soliddrip
+	max_particles 250
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [.2,1]
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]
+	emit_offset [0,.5]
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed 5
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction 1
+	size_start [1,1.5]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.12
+	inherit_speed 0
+	tags [collide_tile, collide_water]
 }
+
 drip2 {
+	#system properties
+	movieclip soliddrip
+	max_particles 250
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [5,8]
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]
+	emit_offset [0,.5]
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed 30
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction 1
+	size_start [.4,.7]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.2
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+distortrain {
+	#system properties
+	movieclip DistortionParticle
+	max_particles 500
+	layer 5
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 16
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [30, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start 3
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .2
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+distortrain2 {
+	inherit distortrain
+	layer 6
+}
+
+fgrain {
+	#system properties
+	movieclip soliddrip
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 20
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [60, 100]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.3,.45]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags [collide_tile, collide_water]
+}
+
+fgraincustom {
+	#system properties
+	movieclip soliddrip
+	max_particles 5000
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 25
+	emit_amount 20
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 40
+	initial_speed [0, .5]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.3,.45]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags []
+}
+
+bgrain {
+	#system properties
+	movieclip TestParticle
+	max_particles 1000
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 150
+	emit_amount 20
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [70, 110]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.1,.3]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags []
+}
+
+
+wind {
+	#system TestParticle
+	movieclip soliddrip
+	max_particles 300
+	layer 3
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 5
+	emit_amount 4
+	emit_direction [1, 0]
+	emit_spread 40
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,1.5]
+	initial_speed [.5, 3]
+	initial_rotation 0
+	rotation_speed 0
+	force [10, 0]
+	friction 1
+	size_start [.6,.8]
+	size_end [0,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+wind2 {
+	#system TestParticle
+	movieclip soliddrip
+	max_particles 300
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 15
+	emit_amount 6
+	emit_direction [1, 0]
+	emit_spread 45
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,1.5]
+	initial_speed [.7, 3.5]
+	initial_rotation 0
+	rotation_speed 0
+	force [10, 0]
+	friction 1
+	size_start [.4,.6]
+	size_end [0,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.3
+	inherit_speed 0
+	tags []
+}
+
+wind_left {
+	#system TestParticle
+	movieclip soliddrip
+	max_particles 300
+	layer 3
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 5
+	emit_amount 4
+	emit_direction [-1, 0]
+	emit_spread 40
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,1.5]
+	initial_speed [.5, 3]
+	initial_rotation 0
+	rotation_speed 0
+	force [-10, 0]
+	friction 1
+	size_start [.6,.8]
+	size_end [0,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+wind2_left {
+	#system TestParticle
+	movieclip soliddrip
+	max_particles 300
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 15
+	emit_amount 6
+	emit_direction [-1, 0]
+	emit_spread 45
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,1.5]
+	initial_speed [.7, 3.5]
+	initial_rotation 0
+	rotation_speed 0
+	force [-10, 0]
+	friction 1
+	size_start [.4,.6]
+	size_end [0,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.3
+	inherit_speed 0
+	tags []
+}
+
+leaves {
+	#system TestParticle
+	movieclip Leaf
+	max_particles 100
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 20
+	emit_box [0, 42]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 40
+	initial_speed [2, 5]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force 0
+	friction 1
+	size_start [.75,1.25]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+rocks {
+	#system TestParticle
+	movieclip Rock
+	max_particles 300
+	layer 0
+	livebounds [-10, 64, -10, 64]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 2
+	emit_direction [0, 1]
+	emit_spread 20
+	emit_box [54, 16]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 100
+	initial_speed [.3, 1.5]
+	initial_rotation [0,360]
+	rotation_speed [-30, 30]
+	force 0
+	friction 1
+	size_start [.75,1.25]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+embers {
+	#system TestParticle
+	movieclip spark
+	max_particles 300
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 30
+	emit_amount 6
+	emit_direction [0, 1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [1, 2.5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -1]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+emberscustom1 {
+	#system TestParticle
+	movieclip spark
+	max_particles 1500
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 150
+	emit_amount 50
+	emit_direction [1, 0]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -1]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+emberscustom2 {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [0, 0]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+embers_artery {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [1, 0]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fgsnow {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [0.8, -1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_water]
+}
+
+fgsnow_light {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount 10
+	emit_direction [0.3, -1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+fgsnow_large {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 4
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [0.8, -1]
+	emit_spread 0
+	emit_box [57, 34]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.7,1.2]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_water]
+}
+
+bgsnow {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [0.8, -1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.6,1]
+	size_end [.1, .2]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_water]
+}
+
+bgsnow_light {
+	#system TestParticle
+	movieclip spark
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount 10
+	emit_direction [0.3, -1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [10, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -.5]
+	friction 1
+	size_start [.6,1]
+	size_end [.1, .2]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+cold {
+	#system TestParticle
+	movieclip spark
+	max_particles 300
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount 3
+	emit_direction [0, 1]
+	emit_spread 0
+	emit_box [54, 32]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [0, 0]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 0]
+	friction 1
+	size_start [.5,.8]
+	size_end [.1,.3]
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+
+spark {
+	#system properties
+	movieclip spark2
+	max_particles 250
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [.2,1]
+	emit_amount [4,8]
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]
+	emit_offset [0,.5]
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed 10
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction 1
+	size_start [.2,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.12
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+spark2 {
+	#system properties
+	movieclip spark2
+	max_particles 100
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [.5,1.5]
+	emit_amount [1,2]
+	emit_direction [0, -1]
+	emit_spread 45
+	emit_box [1, 0]
+	emit_offset [0,1.5]
+	
+	#particle animation properties
+	particle_lifetime 3
+	initial_speed 10
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction 1
+	size_start [.1,.4]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0.2
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+splash {
+	#system properties
+	movieclip soliddrip
+	max_particles 800
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched true
+	
+	#emitter properties
+	emit_rate [5,6.5]
+	emit_amount [2,3]
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]
+	emit_offset [0,-.5]
+	
+	#particle animation properties
+	particle_lifetime [.5,1.5]
+	initial_speed [3,7]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -20]
+	friction 1
+	size_start [.1,.4]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale [1,2]
+	inherit_speed 1
+	tags []
+}
+
+waterfall {
+	combo [waterfall_parts, waterfall_distortion]
+}
+
+waterfall_parts {
+	#system properties
+	movieclip soliddrip2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 3
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 2
+	initial_speed [30, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -250]
+	friction [.8, .9]
+	size_start 1
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .2
+	inherit_speed 0
+	tags [collide_tile, collide_water, player_bounce_waterfall]
+}
+
+waterfall_distortion {
+	#system properties
+	movieclip DistortionParticle2
+	max_particles 500
+	layer 6
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 2
+	initial_speed [30, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -250]
+	friction [.8, .9]
+	size_start 3
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 0
+	tags [collide_tile, collide_water, player_bounce_waterfall]
+}
+
+waterfall_splash {
+	combo [waterfall_splash_top, waterfall_splash_bottom]
+}
+
+waterfall_splash_top {
+	#system properties
+	movieclip soliddrip2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 4
+	emit_direction [0, 1]
+	emit_spread 70
+	emit_box [1.5, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [5, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction 1
+	size_start 1.5
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 1
+	tags [collide_water]
+}
+
+waterfall_splash_bottom {
+	#system properties
+	movieclip soliddrip2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 4
+	emit_direction [0, -1]
+	emit_spread 30
+	emit_box [1.5, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.4]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [10, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 50]
+	friction [.85, .8]
+	size_start [1,3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_air, player_push_strong]
+}
+
+toxwaterfall {
+	combo [toxwaterfall_parts, toxwaterfall_distortion]
+}
+
+toxwaterfall_parts {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount [5,10]
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [5, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -20]
+	friction [.8, 1]
+	size_start [2,4]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .05
+	inherit_speed 0
+	tags [collide_tile, collide_water, player_bounce_waterfall]
+}
+
+toxwaterfall_distortion {
+	#system properties
+	movieclip DistortionParticle2
+	max_particles 500
+	layer 6
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount [5,10]
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [5, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -20]
+	friction [.8, 1]
+	size_start [3,5]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .05
+	inherit_speed 0
+	tags [collide_tile, collide_water, player_bounce_waterfall]
+}
+
+toxwaterfall_splash {
+	combo [toxwaterfall_splash_top, toxwaterfall_splash_bottom]
+}
+
+toxwaterfall_splash_top {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount [10,20]
+	emit_direction [0, 1]
+	emit_spread 70
+	emit_box [1.5, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [5, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction 1
+	size_start 2.5
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 1
+	tags [collide_water]
+}
+
+surface_splash {
+	inherit waterfall_splash_top
+	emit_offset [0,-.5]
+}
+
+toxwaterfall_splash_bottom {
+	#system properties
+	movieclip goo2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 10
+	emit_amount [5,10]
+	emit_direction [0, -1]
+	emit_spread 30
+	emit_box [2.5, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.4]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 2
+	initial_speed [20, 60]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 20]
+	friction [.8, .7]
+	size_start [1,3]
+	size_end 5
+	alpha_start 1
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_air, player_push_strong]
+}
+
+bubbles {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [1.5,2.5]
+	emit_amount [0,3]
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [0, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [0, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 10]
+	friction [.95, .95]
+	size_start [1,3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_air, player_push]
+}
+
+bubbles2 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [1.5,2.5]
+	emit_amount [0,3]
+	emit_direction [0, -1]
+	emit_spread 90
+	emit_box [0, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [0, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 15]
+	friction [.95, .95]
+	size_start [1,3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_air, player_push]
+}
+
+dust {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [.2,.7]
+	emit_amount [1,4]
+	emit_direction [1, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1.5,2.5]
+	initial_speed [2, 4]
+	initial_rotation 0
+	rotation_speed 0
+	force [20, -4]
+	friction [.95, .959]
+	size_start [.5,2]
+	size_end  [0, .5]
+	alpha_start .5 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push]
+}
+
+smoke {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount [0,1]
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push]
+}
+
+smoke2 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount [0,1]
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+smoke_windr {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount [0,1]
+	emit_direction [0.5, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [4, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push]
+}
+smoke_windr2 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 1000
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 90
+	emit_amount [0,3]
+	emit_direction [0.5, 1]
+	emit_spread 120
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [-40, 30]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push, collide_tile]
+}
+
+smoke2_windr {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount [0,1]
+	emit_direction [0.5, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [4, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push]
+}
+
+cloudwind2 {
+	#system properties
+	movieclip WindCloud
+	max_particles 1000
+	layer 7
+	livebounds [-30, 84, -30, 62]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount 1
+	emit_direction [0, 1]
+	emit_spread 30
+	emit_box [64, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,-10]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [10, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .0225 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+cloudwind {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed [20, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .024 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push, collide_water]
+}
+
+cloudwind_hitwater {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 5
+	initial_speed [20, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .024 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push, collide_water]
+}
+
+cloudwind_heavy {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [40, 80]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .030 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+cloudwind_heavy2 {
+	inherit cloudwind_heavy
+	
+	livebounds [-10, 84, -10, 42]
+	emit_direction [-1, 0]
+	emit_offset [74,16]
+}
+
+cloudwind_heavy_thin {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, 31, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 40
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [40, 80]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,3]
+	size_end  1
+	alpha_start .030 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+cloudwind_light {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,24]
+	batched true
+	
+	#emitter properties
+	emit_rate 13
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [5, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start .012 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+cloudwind_light_thin {
+	#system properties
+	movieclip WindCloud
+	max_particles 500
+	layer 7
+	livebounds [-10, 64, 32, 42]
+	prewarm [20,24]
+	batched true
+	
+	#emitter properties
+	emit_rate 13
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [5, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,3]
+	size_end  1
+	alpha_start .012 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+lightingtest {
+	#system properties
+	movieclip Light
+	max_particles 500
+	layer 6
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,24]
+	batched false
+	
+	#emitter properties
+	emit_rate 2
+	emit_amount 1
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [0, 40]	  #54 for "level width", 32 for "level height"	
+	emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 10
+	initial_speed [5, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [1.5,6]
+	size_end  1
+	alpha_start [0,1] #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+fallout {
+	#system properties
+	movieclip Leaf
+	max_particles 1000
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 1
+	emit_direction [-.2, -1]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [2, 4]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force [-.5, -.5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+fallout2 {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 250
+	emit_amount 1
+	emit_direction [.2, -1]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [10,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [2, 4]
+	initial_rotation [0,360]
+	rotation_speed [-200, 200]
+	force [.5, -.5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [collide_tile]
+}
+
+fallout3_windR {
+	#system properties
+	movieclip Leaf2
+	max_particles 1000
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,48]
+	batched true
+	
+	#emitter properties
+	emit_rate 500
+	emit_amount 1
+	emit_direction [0.5, -1]
+	emit_spread 20
+	emit_box [54, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 30
+	initial_speed [0, 4]
+	initial_rotation [0,-360]
+	rotation_speed [200, -200]
+	force [0, -.5]
+	friction 1
+	size_start [.5,1]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+mist {
+	#system properties
+	movieclip TestParticle2
+	max_particles 1000
+	layer 7
+	livebounds [-30, 84, -30, 62]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 5
+	emit_direction [0, -1]
+	emit_spread 20
+	emit_box [64, 42]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [0,15]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction .99
+	size_start [.1]
+	size_end  [200,400]
+	alpha_start .2 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+mist2 {
+	#system properties
+	movieclip TestParticle2
+	max_particles 1000
+	layer 7
+	livebounds [-30, 84, -30, 62]
+	prewarm [20,12]
+	batched true
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 5
+	emit_direction [0, -1]
+	emit_spread 20
+	emit_box [64, 42]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [0,5]
+	initial_rotation 0
+	rotation_speed 0
+	force 0
+	friction .99
+	size_start [.05]
+	size_end  [200,400]
+	alpha_start .03 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [player_push]
+}
+
+
+
+toxicbubbles {
+	combo [toxicbubbles_bubbs, toxicbubbles_jumpers]
+}
+
+toxicbubbles_bubbs {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 1000
+	layer 5
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate [20,40]
+	emit_amount 1
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .3
+	initial_speed [5,8]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-40]
+	friction 1
+	size_start [1,3]
+	size_end  1
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+toxicbubbles_jumpers {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 1000
+	layer 5
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate [1,2]
+	emit_amount 1
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [10,12]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-40]
+	friction 1
+	size_start [1,2.0]
+	size_end  1
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+lightning {
+	#system properties
+	movieclip Lightning
+	max_particles 10
+	layer 0
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [.15,1.5]
+	emit_amount 1
+	emit_direction [0, 0]
+	emit_spread 360
+	emit_box [54, 10]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,24]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.2, .5]
+	initial_speed 0
+	initial_rotation [-30, 30]
+	rotation_speed 0
+	force 0
+	friction 1
+	size_start [.5, 2]
+	size_end  1
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags [lightning_flash]
+}
+
+toxicdump_down {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 1000
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 1
+	emit_direction [0, 0]
+	emit_spread 10
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 3
+	initial_speed 0
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-40]
+	friction [.95, .95]
+	size_start [.3,1]
+	size_end  2
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_water, player_bounce_waterfall ]
+}
+
+toxicdump_down2 {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 1000
+	layer 0
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate 60
+	emit_amount 1
+	emit_direction [0, 0]
+	emit_spread 10
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 3
+	initial_speed 0
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-40]
+	friction [.95, .95]
+	size_start [.3,1]
+	size_end  2
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [collide_water]
+}
+
+toxicdump_right {
+	inherit toxicdump_down
+	
+	emit_direction [1, 0]
+	emit_box [0, 1]
+	emit_offset [-.5,0]
+	initial_speed 8
+}
+
+toxicdump_left {
+	inherit toxicdump_down
+	
+	emit_direction [-1, 0]
+	emit_box [0, 1]
+	emit_offset [.5,0]
+	initial_speed 8
+}
+
+
+###############################################
+################################################
+#################################################
+##################################################
+### TRIGGERED PARTICLE EFFECTS AFTER THIS BREAK ###
+##################################################
+#################################################
+################################################
+###############################################
+
+PlayerCollide_Wall {
+	#system properties
+	movieclip soliddrip
+	max_particles 100
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [1, 0]
+	emit_spread 60
+	emit_box [1, 0]	  
+	emit_offset [0,-.35]  
+	
+	#particle animation properties
+	particle_lifetime [.5, .7]
+	initial_speed [-20, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .8
+	size_start [1,2]
+	size_end  0
+	alpha_start .4 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [bounce_tile]
+}
+
+PlayerCollide_Up {
+	inherit PlayerCollide_Wall
+	
+	emit_direction [1, 0]
+	emit_box [1, 0]
+	emit_offset [0,.35]
+}
+PlayerCollide_Down4 {
+	inherit PlayerCollide_Wall
+	
+	emit_amount 60
+	initial_speed [-50, 50]
+	emit_direction [1, 0]
+	emit_box [1, 0]
+	emit_offset [0,-.35]
+}
+PlayerCollide_Down3 {
+	inherit PlayerCollide_Wall
+	
+	emit_amount 45
+	initial_speed [-40, 40]
+	emit_direction [1, 0]
+	emit_box [1, 0]
+	emit_offset [0,-.35]
+}
+PlayerCollide_Down2 {
+	inherit PlayerCollide_Wall
+	
+	emit_amount 30
+	initial_speed [-30, 30]
+	emit_direction [1, 0]
+	emit_box [1, 0]
+	emit_offset [0,-.35]
+}
+PlayerCollide_Down1 {
+	inherit PlayerCollide_Wall
+	
+	emit_amount 15
+	initial_speed [-15, 15]
+	emit_direction [1, 0]
+	emit_box [1, 0]
+	emit_offset [0,-.35]
+}
+PlayerCollide_Left {
+	inherit PlayerCollide_Wall
+	
+	emit_direction [0, 1]
+	emit_box [0, 1]
+	emit_offset [-.35,0]
+}
+PlayerCollide_Right {
+	inherit PlayerCollide_Wall
+	
+	emit_direction [0, 1]
+	emit_box [0, 1]
+	emit_offset [.35,0]
+}
+
+
+PlayerJump_Poof {
+	#system properties
+	movieclip soliddrip
+	max_particles 100
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.2, .2]	 
+	emit_offset [0,0]  
+	
+	#particle animation properties
+	particle_lifetime [.7, .9]
+	initial_speed [0, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .9
+	size_start [1,2]
+	size_end  0
+	alpha_start .4 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed [0,.5]
+	tags [bounce_tile]
+}
+
+PlayerJump {
+	combo [PlayerJump_Poof, PlayerCollide_Down1]
+}
+PlayerLedgeJump {
+	combo [PlayerJump_Poof]
+}
+
+PlayerDeath_Pop2 {
+	#system properties
+	movieclip soliddrip
+	max_particles 100
+	layer 1
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 70
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1.7, 2.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .88
+	size_start [.5, 3]
+	size_end  0
+	alpha_start .7 
+	alpha_end .5
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [bounce_tile]
+}
+
+PlayerDeath_Pop {
+	#system properties
+	movieclip blackpart
+	max_particles 100
+	layer 1
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 90
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 30]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.5, 4]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [bounce_tile]
+}
+PlayerDeath_Gibs {
+	#system properties
+	movieclip Gibs
+	max_particles 100
+	layer 1
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 15
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]   
+	emit_offset [0,0]  
+	
+	#particle animation properties
+	particle_lifetime [.5, 2]
+	initial_speed [5, 15]
+	initial_rotation [0, 360]
+	rotation_speed [-1080, 1080]
+	force [0,-30]
+	friction 1
+	size_start 1.2
+	size_end  .9
+	alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+PlayerDeath {
+	combo [PlayerDeath_Pop, PlayerDeath_Pop2, PlayerDeath_Gibs]
+}
+
+
+
+PlayerSplash_Top {
+	#system properties
+	movieclip TestParticle2
+	max_particles 300
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 100
+	emit_direction [0, 1]
+	emit_spread 70
+	emit_box [1.5, 0]   
+	emit_offset [0,.1] 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 15]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction 1
+	size_start 1.5
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 0
+	tags [collide_water]
+}
+
+PlayerSplash_Bottom {
+	#system properties
+	movieclip TestParticle2
+	max_particles 300
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 100
+	emit_direction [0, -1]
+	emit_spread 50
+	emit_box [1, 0]	
+	emit_offset [0,-.1] 
+	
+	#particle animation properties
+	particle_lifetime [1, 2]
+	initial_speed [0, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 20]
+	friction .9
+	size_start [1,3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed [0,.3]
+	tags [collide_air, player_push]
+}
+
+PlayerSplash_Top_Out { 
+	inherit PlayerSplash_Top
+	inherit_speed [0,1]
+	initial_speed [0, 5]
+	emit_box [0.4, 0]
+	initial_speed [0, 5]  
+}
+
+PlayerSplash_In {
+	combo [PlayerSplash_Top, PlayerSplash_Bottom]
+}
+PlayerSplash_Out {
+	combo [PlayerSplash_Top_Out]
+}
+
+
+PlayerSplashTox_Top {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 300
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 50
+	emit_direction [0, 1]
+	emit_spread 70
+	emit_box [1.5, 0]   
+	emit_offset [0,.1] 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 15]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction .95
+	size_start 2
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 0
+	tags [collide_water]
+}
+
+PlayerSplashTox_Bottom {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 300
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 50
+	emit_direction [0, -1]
+	emit_spread 50
+	emit_box [1, 0]	
+	emit_offset [0,-.1] 
+	
+	#particle animation properties
+	particle_lifetime [1, 2]
+	initial_speed [0, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 20]
+	friction .9
+	size_start [2,4]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed [0,.3]
+	tags [collide_air, player_push]
+}
+
+PlayerSplashTox_Top_Out {
+	inherit PlayerSplashTox_Top
+	inherit_speed [0,1]
+	initial_speed [0, 5]
+}
+
+PlayerSplashTox_In {
+	combo [PlayerSplashTox_Top, PlayerSplashTox_Bottom]
+}
+PlayerSplashTox_Out {
+	combo [PlayerSplashTox_Top_Out]
+}
+
+
+PlayerSplashUltraTox_Top {
+	#system properties
+	movieclip ToxicParticle
+	max_particles 300
+	layer 5
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 50
+	emit_direction [0, 1]
+	emit_spread 90
+	emit_box [1, 0]   
+	emit_offset [0,.1] 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 15]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -40]
+	friction .95
+	size_start 2
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .1
+	inherit_speed 0
+	tags [collide_water]
+}
+
+PlayerSplashUltraTox_In {
+	combo [PlayerSplashUltraTox_Top]
+}
+PlayerSplashUltraTox_Out {
+	combo [PlayerSplashUltraTox_Top]
+}
+
+
+
+
+
+Fireball_Smoke {
+	movieclip TestParticle2
+	max_particles 300
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [20, 40]
+	emit_amount [1,2]
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.7, .7]
+	emit_offset [0,0]
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [0, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 0]
+	friction .95
+	size_start [3,8]
+	size_end 0
+	alpha_start .7
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed .1
+	tags [player_push]
+}
+
+Fireball_Sparks {
+	movieclip spark
+	max_particles 300
+	layer 1
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate [20, 40]
+	emit_amount [1,2]
+	emit_direction [0, 1]
+	emit_spread 30
+	emit_box [.7, .7]
+	emit_offset [0,0]
+	
+	#particle animation properties
+	particle_lifetime [1,2]
+	initial_speed [0, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, -10]
+	friction .95
+	size_start [2,3]
+	size_end 0
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed .3
+	tags [player_push]
+}
+
+Fireball {
+	combo [Fireball_Sparks, Fireball_Smoke]
+}
+
+
+EnemyDeath_Pop {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 3]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+EnemyDeath {
+	combo [EnemyDeath_Pop]
+}
+
+
+BulletPop {
+	#system properties
+	movieclip bulletretro
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 10
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.1, .1]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.2, .5]
+	initial_speed [0, 20]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .90
+	size_start [.7, 1]
+	size_end  0
+	alpha_start .6 
+	alpha_end .4
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [bounce_tile]
+}
+
+SpitBulletPop {
+	#system properties
+	movieclip TestParticle2
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.1, .1]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 10]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-20]
+	friction .90
+	size_start [1, 3]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [bounce_tile]
+}
+
+
+PlayerLand_Cloud {
+	#system properties
+	movieclip cloud
+	max_particles 100
+	layer 3
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [1, 0]
+	emit_spread 60
+	emit_box [1, 0]	  
+	emit_offset [0,-.35]  
+	
+	#particle animation properties
+	particle_lifetime [.4, 1.5]
+	initial_speed [-20, 30]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-20]
+	friction .8
+	size_start [3,5]
+	size_end  0
+	alpha_start 3
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+
+
+
+PlayerAir_Gibs {
+	#system properties
+	movieclip Gibs2
+	max_particles 100
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [1, 5]
+	emit_amount 1
+	emit_direction [0, 1]
+	emit_spread 180
+	emit_box [.35, .35]   
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.5, 2]
+	initial_speed [2, 5]
+	initial_rotation [0, 360]
+	rotation_speed [-1080, 1080]
+	force [0,-10]
+	friction 1
+	size_start .7
+	size_end  .6
+	alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 0
+	tags [dampened_bounce_tile]
+}
+
+PlayerDrowning_Gibs {
+	inherit PlayerAir_Gibs
+	emit_rate [5, 10]
+}
+
+
+PlayerDrownPulse {
+	inherit PlayerAir_Gibs
+	emit_rate 0
+	emit_amount 50
+	initial_speed [5, 10]
+	
+	particle_lifetime [.2, .4]
+}
+
+
+
+FallingPlatform_Rocks {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate [.5, 1]
+	emit_amount 1.5
+	emit_direction [0, 1]
+	emit_spread 180
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.8, 1.5]
+	initial_speed [3, 5]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -30]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+FallingPlatform_Dust {
+	#system properties
+	movieclip TestParticle
+	max_particles 1000
+	layer 3
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [1, 0]
+	emit_spread 360
+	emit_box [1, 1]	  
+	emit_offset [0,0]  
+	
+	#particle animation properties
+	particle_lifetime [.2, 1.3]
+	initial_speed [-15, 15]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .9
+	size_start [2,5]
+	size_end  0
+	alpha_start 1
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags []
+}
+
+BreakyBlock_Destroy {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 40
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1.5]
+	initial_speed [3, 6]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -30]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+SmashyBlock_Destroy {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 40
+	emit_direction [0, 1]
+	emit_spread 270
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1.5]
+	initial_speed [7, 10]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -30]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+
+Explode {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 55
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [1.5, 2.5]
+	initial_speed [20, 30]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [10, -80]
+	friction 1
+	size_start [1,2]
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+
+MineSmoke {
+	movieclip cloud
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 100
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.5, .75]
+	initial_speed [0, 60]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 30]
+	friction .75
+	size_start [1, 4]
+	size_end  [.5, 2.5]
+	alpha_start [.1, .2] 
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+MineExplode {
+combo [Explode, MineSmoke]	
+}
+
+
+CollectLife {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 40
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 25]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+
+CollectBigLife {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+CollectKey {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 15
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 30]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 1.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+
+CollectHead {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+CollectBody {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+CollectHeart {
+	   #system properties
+	movieclip bulletretro
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-10]
+	friction .87
+	size_start [.4, .8]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+CollectCart {
+	#system properties
+	movieclip bulletretro
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-10]
+	friction .87
+	size_start [.4, .8]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+BackWarp_Enter {
+	#system properties
+	movieclip blackpart
+	max_particles 100
+	layer 1
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 15
+	emit_direction [0, 1]
+	emit_spread 180
+	emit_box [.35, .35]   
+	emit_offset [0,0]  
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [6, 15]
+	initial_rotation [0, 360]
+	rotation_speed [-1080, 1080]
+	force [0,-30]
+	friction 1
+	size_start [.6, 2]
+	size_end  [.4, 1]
+	alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+
+EnemyBounce_Trail {
+	#system properties
+	movieclip cloud
+	max_particles 100
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 10
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.2, .2]	 
+	emit_offset [0,.35]  
+	
+	#particle animation properties
+	particle_lifetime [.7, .9]
+	initial_speed [0, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .9
+	size_start [1,2]
+	size_end  0
+	alpha_start .4 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed [0,.8]
+	tags [bounce_tile]
+}
+
+EnemyBounce_Poof {
+	#system properties
+	movieclip cloud
+	max_particles 100
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 10
+	emit_direction [1, 0]
+	emit_spread 30
+	emit_box [1, 0]	  
+	emit_offset [0,.35]  
+	
+	#particle animation properties
+	particle_lifetime [.5, .7]
+	initial_speed [-30, 30]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .8
+	size_start [1,2]
+	size_end  0
+	alpha_start .4 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 0
+	tags [bounce_tile]
+}
+
+EnemyBounce {
+	combo [EnemyBounce_Poof, EnemyBounce_Trail]
+}
+
+
+CritterDeath {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 20
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,0]   
+	
+	#particle animation properties
+	particle_lifetime [.6, 1]
+	initial_speed [0, 13]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.3, 1.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+PlaceBody {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,1]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+PlaceHead {
+	#system properties
+	movieclip blackpart
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,1]   
+	
+	#particle animation properties
+	particle_lifetime [1, 1.5]
+	initial_speed [0, 40]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,0]
+	friction .82
+	size_start [.4, 2.5]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+PlaceHeart {
+	#system properties
+	movieclip bulletretro
+	max_particles 300
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 60
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [.35, .35]	 
+	emit_offset [0,1]   
+	
+	#particle animation properties
+	particle_lifetime [.5, 1]
+	initial_speed [0, 50]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-10]
+	friction .87
+	size_start [.4, .8]
+	size_end  0
+	alpha_start 1 
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed .5
+	tags [bounce_tile]
+}
+
+ChainTile_Open {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 40
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1.5]
+	initial_speed [3, 6]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -30]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+LockTile_Open {
+	movieclip Rock2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm 0
+	batched false
+	
+	#emitter properties
+	emit_rate 0
+	emit_amount 40
+	emit_direction [0, 1]
+	emit_spread 360
+	emit_box [1, 1]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [.5, 1.5]
+	initial_speed [3, 6]
+	initial_rotation [0,360]
+	rotation_speed [-1080, 1080]
+	force [0, -30]
+	friction 1
+	size_start 1
+	size_end 1
+	alpha_start 5
+	alpha_end 0
+	face_moving_direction false
+	speed_scale 0
+	inherit_speed 1
+	tags [dampened_bounce_tile]
+}
+
+riseout {
     #system properties
-    movieclip soliddrip
-    max_particles 250
-    layer 1
+    movieclip Leaf2
+    max_particles 200
+    layer 2
     livebounds [-10, 64, -10, 42]
-    batched false
+    prewarm [30,2]
+    batched true
     
     #emitter properties
-    emit_rate [5,8]
+    emit_rate 30
     emit_amount 1
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]
-    emit_offset [0,.5]
+    emit_direction [-.2, 1]
+    emit_spread 20
+    emit_box [54, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime 5
-    initial_speed 30
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -10]
+    particle_lifetime 30
+    initial_speed [0, -8]
+    initial_rotation [0,360]
+    rotation_speed [-200, 200]
+    force [0, 1.5]
     friction 1
-    size_start [.4,.7]
+    size_start [.5,1]
     size_end 1
     alpha_start 1
     alpha_end 1
     face_moving_direction true
-    speed_scale 0.2
+    speed_scale 0
     inherit_speed 0
     tags [collide_tile]
 }
 
-distortrain {
+rocks2 {
+    #system TestParticle
+    movieclip Rock
+    max_particles 200
+    layer 0
+    livebounds [-10, 64, -10, 42]
+    prewarm [48,10]
+    batched true
+    
+    #emitter properties
+    emit_rate 2
+    emit_amount 2
+    emit_direction [0, 1]
+    emit_spread 20
+    emit_box [54, 2]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 80
+    initial_speed [0, 0.5]
+    initial_rotation [0,360]
+    rotation_speed [-50, 50]
+    force [0, 1]
+    friction 1
+    size_start [.75,1.25]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction false
+    speed_scale 0
+    inherit_speed 0
+    tags []
+}
+
+rocksfall {
+    #system TestParticle
+    movieclip Rock
+    max_particles 200
+    layer 0
+    livebounds [-10, 64, -10, 42]
+    prewarm [48,2]
+    batched true
+    
+    #emitter properties
+    emit_rate 2
+    emit_amount 5
+    emit_direction [0, -1]
+    emit_spread 20
+    emit_box [54, 10]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 80
+    initial_speed [0, 0.5]
+    initial_rotation [0,360]
+    rotation_speed [-50, 50]
+    force [0, -2]
+    friction 1
+    size_start [.45,1.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction false
+    speed_scale 0
+    inherit_speed 0
+    tags []
+}
+
+fallout3Rwind {
     #system properties
-    movieclip DistortionParticle
+    movieclip Leaf2
+    max_particles 2500
+    layer 3
+    livebounds [-10, 64, -10, 42]
+    prewarm [40,24]
+    batched true
+    
+    #emitter properties
+    emit_rate 250
+    emit_amount 2
+    emit_direction [-.2, -1]
+    emit_spread 20
+    emit_box [154, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27, 0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 30
+    initial_speed [-8, -.5]
+    initial_rotation [0,360]
+    rotation_speed [-200, 200]
+    force [2, .1]
+    friction 1
+    size_start [.5,1]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 0
+    tags []
+}
+
+meatdump_down {
+	#system properties
+	movieclip Gibs2
+	max_particles 1000
+	layer 2
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate 8
+	emit_amount 1
+	emit_direction [0, 0]
+	emit_spread 10
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 3
+	initial_speed 0
+	initial_rotation 0
+	rotation_speed 0
+	force [0,-40]
+	friction [.95, .95]
+	size_start [1.6,2]
+	size_end  2
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_bounce_waterfall, collide_tile]
+}
+
+smoke_low {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount [0,1]
+	emit_direction [0, 1]
+	emit_spread 75
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags [player_push]
+}
+
+smoke2_low {
+	#system properties
+	movieclip TestParticle2
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	batched false
+	
+	#emitter properties
+	emit_rate 20
+	emit_amount [0,1]
+	emit_direction [0, 1]
+	emit_spread 75
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime [2,3.5]
+	initial_speed [1, 5]
+	initial_rotation 0
+	rotation_speed 0
+	force [0, 7]
+	friction [.95, .959]
+	size_start [4,8]
+	size_end  [0, .75]
+	alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 0
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+storm2 {
+	combo[bgrain2, lightning, fgrain2]
+}
+
+bgrain2 {
+    #system properties
+    movieclip soliddrip
+    max_particles 500
+    layer 0
+    livebounds [-20, 74, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 3
+    emit_amount 6
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [70, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 2
+    initial_speed [30, 50]
+    initial_rotation 0
+    rotation_speed 0
+    force [-6, -10]
+    friction 1
+    size_start [.3,.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale .5
+    inherit_speed 0
+    tags [collide_water]
+}
+
+fgrain2 {
+    #system properties
+    movieclip soliddrip
+    max_particles 500
+    layer 2
+    livebounds [-20, 74, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 5
+    emit_amount 10
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [70, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 2
+    initial_speed [30, 50]
+    initial_rotation 0
+    rotation_speed 0
+    force [-6, -10]
+    friction 1
+    size_start [.3,.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale .5
+    inherit_speed 0
+    tags [collide_tile, collide_water]
+}
+
+meteorrain {
+    #system properties
+    movieclip ShootingStar
+    max_particles 500
+    layer 0
+    livebounds [-20, 74, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 1
+    emit_amount 1
+    emit_direction [-.12, -1]
+    emit_spread 0
+    emit_box [70, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [35,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 30
+    initial_speed [0.05, 0,1]
+    initial_rotation 0
+    rotation_speed 0
+    force [-1, -1.2]
+    friction 1
+    size_start [.18,.19]
+    size_end 0.2
+    alpha_start 1
+    alpha_end 2
+    face_moving_direction false
+    speed_scale 0
+    inherit_speed 0
+    tags [collide_water]
+}
+
+meat_dump {
+    #system properties
+    movieclip Gibs
+    max_particles 1000
+    layer 2
+    livebounds [-10, 64, -10, 42]
+    batched false
+    
+    #emitter properties
+    emit_rate 50
+    emit_amount [1,2]
+    emit_direction [0, 1]
+    emit_spread 60
+    emit_box [.6, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [0, 1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime [1,1.2]
+    initial_speed [8, 13]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 7]
+    friction [.95, .959]
+    size_start [4,8]
+    size_end  [0, .55]
+    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+    alpha_end 0
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 1
+    tags [player_push, collide_tile]
+}
+
+gusher_dump_down {
+    combo[meat_dump_down, toxic_dump_down]
+}
+
+meat_dump_down {
+    #system properties
+    movieclip Gibs
+    max_particles 1000
+    layer 2
+    livebounds [-10, 64, -10, 42]
+    batched false
+    
+    #emitter properties
+    emit_rate 25
+    emit_amount [1,2]
+    emit_direction [0, -1]
+    emit_spread 110
+    emit_box [.6, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [0,-.1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime [1.2,1.3]
+    initial_speed [10, 11]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 1]
+    friction [.95, .99]
+    size_start [1]
+    size_end  [1]
+    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+    alpha_end 0
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 1
+    tags [player_push, collide_tile]
+}
+
+toxic_dump_down {
+    #system properties
+    movieclip ToxicParticle
+    max_particles 1000
+    layer 2
+    livebounds [-10, 64, -10, 42]
+    batched false
+    
+    #emitter properties
+    emit_rate 40
+    emit_amount [1,2]
+    emit_direction [0, -1]
+    emit_spread 110
+    emit_box [.6, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [0,-.1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime [1.2,1.3]
+    initial_speed [10, 11]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 1]
+    friction [.95, .99]
+    size_start [2]
+    size_end  [2, 2.5]
+    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+    alpha_end 0
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 1
+    tags [player_push, collide_tile]
+}
+
+meat_dump_right {
+    #system properties
+    movieclip Gibs
+    max_particles 1000
+    layer 2
+    livebounds [-10, 64, -10, 42]
+    batched false
+    
+    #emitter properties
+    emit_rate 80
+    emit_amount [1,2]
+    emit_direction [3, 1]
+    emit_spread 40
+    emit_box [.1, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [0,-.1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime [1,1.4]
+    initial_speed [14, 22]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 7]
+    friction [.95, .959]
+    size_start [4,8]
+    size_end  [0, .55]
+    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+    alpha_end 0
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 1
+    tags [player_push, collide_tile]
+}
+
+meat_dump_left {
+    #system properties
+    movieclip Gibs
+    max_particles 1000
+    layer 2
+    livebounds [-10, 64, -10, 42]
+    batched false
+    
+    #emitter properties
+    emit_rate 80
+    emit_amount [1,2]
+    emit_direction [-3, 1]
+    emit_spread 40
+    emit_box [.1, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [0,-.1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime [1,1.4]
+    initial_speed [14, 22]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 7]
+    friction [.95, .959]
+    size_start [4,8]
+    size_end  [0, .55]
+    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
+    alpha_end 0
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 1
+    tags [player_push, collide_tile]
+}
+
+collapseparts_1 {
+	combo [collapsebgrain_1, lightning, collapsefgrain_1, collapsefizzy]
+}
+
+collapseparts_1t {
+	combo [collapsebgrain_1t, lightning, collapsefgrain_1t, collapsefizzy]
+}
+
+collapseparts_2t {
+	combo [collapsebgrain_2t, lightning, collapsefgrain_2t, collapsefizzy]
+}
+
+collapseparts_2 {
+	combo [collapsebgrain_2, lightning, collapsefgrain_2, collapsefizzy]
+}
+
+collapsefizzy {
+    #system properties
+    movieclip TestParticle2
+    max_particles 1000
+    layer 4
+    livebounds [-10, 64, -10, 42]
+	prewarm [10,30]
+    batched true
+    
+    #emitter properties
+    emit_rate [30,30]
+    emit_amount [1,3]
+    emit_direction [0, 1]
+    emit_spread 0
+    emit_box [54, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime 20
+    initial_speed [2.5, 10]
+    initial_rotation 0
+    rotation_speed 0
+    force [0, 0]
+    friction [1, 1]
+    size_start [1,5]
+    size_end 0
+    alpha_start [0.3,0.7]
+    alpha_end 1
+    face_moving_direction true
+    speed_scale 0
+    inherit_speed 0
+    tags [collide_air, player_push]
+}
+
+collapsefgrain_1 {
+    #system properties
+    movieclip soliddrip2
     max_particles 500
     layer 5
     livebounds [-10, 64, -10, 42]
@@ -109,51 +5109,12 @@ distortrain {
     batched true
     
     #emitter properties
-    emit_rate 250
-    emit_amount 16
-    emit_direction [0, -1]
+    emit_rate 30
+    emit_amount 15
+    emit_direction [0.25, -1]
     emit_spread 0
-    emit_box [58, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1
-    initial_speed [30, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [-2, -10]
-    friction 1
-    size_start 3
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .2
-    inherit_speed 0
-    tags [collide_tile]
-}
-
-distortrain2 {
-    inherit distortrain
-    layer 6
-}
-
-fgrain {
-    #system properties
-    movieclip soliddrip
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,6]
-    batched true
-    
-    #emitter properties
-    emit_rate 250
-    emit_amount 20
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [58, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    emit_box [62, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
     particle_lifetime .5
@@ -169,12 +5130,114 @@ fgrain {
     face_moving_direction true
     speed_scale .5
     inherit_speed 0
-    tags [collide_tile]
+    tags [collide_water]
 }
 
-bgrain {
+collapsefgrain_1t {
     #system properties
-    movieclip TestParticle
+    movieclip soliddrip2
+    max_particles 200
+    layer 5
+    livebounds [-10, 64, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 15
+    emit_amount 10
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [62, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime .5
+    initial_speed [60, 100]
+    initial_rotation 0
+    rotation_speed 0
+    force [-2, -10]
+    friction 1
+    size_start [.3,.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale .5
+    inherit_speed 0
+    tags [collide_water]
+}
+
+collapsefgrain_2t {
+    #system properties
+    movieclip ToxicParticle
+    max_particles 200
+    layer 5
+    livebounds [-10, 64, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 15
+    emit_amount 10
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [62, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime .5
+    initial_speed [60, 100]
+    initial_rotation 0
+    rotation_speed 0
+    force [-2, -10]
+    friction 1
+    size_start [.3,.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale .5
+    inherit_speed 0
+    tags [collide_water]
+}
+
+collapsefgrain_2 {
+    #system properties
+    movieclip ToxicParticle
+    max_particles 500
+    layer 5
+    livebounds [-10, 64, -10, 42]
+    prewarm [20,6]
+    batched true
+    
+    #emitter properties
+    emit_rate 30
+    emit_amount 15
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [62, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [24,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    
+    #particle animation properties
+    particle_lifetime .5
+    initial_speed [60, 100]
+    initial_rotation 0
+    rotation_speed 0
+    force [-2, -10]
+    friction 1
+    size_start [.3,.45]
+    size_end 1
+    alpha_start 1
+    alpha_end 1
+    face_moving_direction true
+    speed_scale .5
+    inherit_speed 0
+    tags [collide_water]
+}
+
+collapsebgrain_1 {
+    #system properties
+    movieclip soliddrip2
     max_particles 1000
     layer 0
     livebounds [-10, 64, -10, 42]
@@ -182,9 +5245,9 @@ bgrain {
     batched true
     
     #emitter properties
-    emit_rate 150
-    emit_amount 20
-    emit_direction [0, -1]
+    emit_rate 30
+    emit_amount 15
+    emit_direction [0.25, -1]
     emit_spread 0
     emit_box [58, 0]      #54 for "level width", 32 for "level height"    
     emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
@@ -203,48 +5266,13 @@ bgrain {
     face_moving_direction true
     speed_scale .5
     inherit_speed 0
-    tags []
+    tags [collide_water]
 }
 
-
-wind {
-    #system TestParticle
-    movieclip soliddrip
-    max_particles 300
-    layer 3
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,6]
-    batched true
-    
-    #emitter properties
-    emit_rate 5
-    emit_amount 4
-    emit_direction [1, 0]
-    emit_spread 40
-    emit_box [54, 32]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [1,1.5]
-    initial_speed [.5, 3]
-    initial_rotation 0
-    rotation_speed 0
-    force [10, 0]
-    friction 1
-    size_start [.6,.8]
-    size_end [0,.3]
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags []
-}
-
-wind2 {
-    #system TestParticle
-    movieclip soliddrip
-    max_particles 300
+collapsebgrain_1t {
+    #system properties
+    movieclip soliddrip2
+    max_particles 200
     layer 0
     livebounds [-10, 64, -10, 42]
     prewarm [20,6]
@@ -252,2621 +5280,303 @@ wind2 {
     
     #emitter properties
     emit_rate 15
-    emit_amount 6
-    emit_direction [1, 0]
-    emit_spread 45
-    emit_box [54, 32]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    emit_amount 10
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [58, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime [1,1.5]
-    initial_speed [.7, 3.5]
+    particle_lifetime .5
+    initial_speed [70, 110]
     initial_rotation 0
     rotation_speed 0
-    force [10, 0]
+    force [-2, -10]
     friction 1
-    size_start [.4,.6]
-    size_end [0,.3]
+    size_start [.1,.3]
+    size_end 1
     alpha_start 1
     alpha_end 1
     face_moving_direction true
-    speed_scale 0.3
+    speed_scale .5
     inherit_speed 0
-    tags []
+    tags [collide_water]
 }
 
-leaves {
-    #system TestParticle
-    movieclip Leaf
-    max_particles 100
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,48]
-    batched true
-    
-    #emitter properties
-    emit_rate 2
-    emit_amount 1
-    emit_direction [1, 0]
-    emit_spread 20
-    emit_box [0, 42]      #54 for "level width", 32 for "level height"    
-    emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 40
-    initial_speed [2, 5]
-    initial_rotation [0,360]
-    rotation_speed [-200, 200]
-    force 0
-    friction 1
-    size_start [.75,1.25]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 0
-    tags []
-}
-
-rocks {
-    #system TestParticle
-    movieclip Rock
+collapsebgrain_2t {
+    #system properties
+    movieclip ToxicParticle
     max_particles 200
     layer 0
     livebounds [-10, 64, -10, 42]
-    prewarm [20,48]
+    prewarm [20,6]
     batched true
     
     #emitter properties
-    emit_rate 2
-    emit_amount 2
-    emit_direction [0, 1]
-    emit_spread 20
-    emit_box [54, 16]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    emit_rate 15
+    emit_amount 10
+    emit_direction [0.25, -1]
+    emit_spread 0
+    emit_box [58, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime 80
-    initial_speed [.3, 1.5]
-    initial_rotation [0,360]
-    rotation_speed [-30, 30]
-    force 0
+    particle_lifetime .5
+    initial_speed [70, 110]
+    initial_rotation 0
+    rotation_speed 0
+    force [-2, -10]
     friction 1
-    size_start [.75,1.25]
+    size_start [.1,.3]
     size_end 1
     alpha_start 1
     alpha_end 1
-    face_moving_direction false
-    speed_scale 0
+    face_moving_direction true
+    speed_scale .5
     inherit_speed 0
-    tags []
+    tags [collide_water]
 }
 
-embers {
-    #system TestParticle
-    movieclip spark
-    max_particles 300
-    layer 1
+collapsebgrain_2 {
+    #system properties
+    movieclip ToxicParticle
+    max_particles 1000
+    layer 0
     livebounds [-10, 64, -10, 42]
     prewarm [20,6]
     batched true
     
     #emitter properties
     emit_rate 30
-    emit_amount 6
-    emit_direction [0, 1]
+    emit_amount 15
+    emit_direction [0.25, -1]
     emit_spread 0
-    emit_box [54, 32]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    emit_box [58, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [1, 2.5]
+    particle_lifetime .5
+    initial_speed [70, 110]
     initial_rotation 0
     rotation_speed 0
-    force [0, -1]
+    force [-2, -10]
     friction 1
-    size_start [.7,1.2]
-    size_end [.1,.3]
+    size_start [.1,.3]
+    size_end 1
     alpha_start 1
     alpha_end 1
     face_moving_direction true
-    speed_scale 0
+    speed_scale .5
     inherit_speed 0
-    tags []
+    tags [collide_water]
 }
 
-cold {
-    #system TestParticle
-    movieclip spark
-    max_particles 300
-    layer 1
-    livebounds [-10, 64, -10, 42]
+fgrain_retro {
+	#system properties
+	movieclip rain_retro
+	max_particles 250
+	layer 2
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 50
+	emit_amount 10
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [60, 100]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.3,.45]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags [collide_tile, collide_water]
+}
+
+bgrain_retro {
+	#system properties
+	movieclip rain_retro
+	max_particles 500
+	layer 0
+	livebounds [-10, 64, -10, 42]
+	prewarm [20,6]
+	batched true
+	
+	#emitter properties
+	emit_rate 75
+	emit_amount 10
+	emit_direction [0, -1]
+	emit_spread 0
+	emit_box [58, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [27,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .5
+	initial_speed [70, 110]
+	initial_rotation 0
+	rotation_speed 0
+	force [-2, -10]
+	friction 1
+	size_start [.1,.3]
+	size_end 1
+	alpha_start 1
+	alpha_end 1
+	face_moving_direction true
+	speed_scale .5
+	inherit_speed 0
+	tags []
+}
+
+toxicbubblesflipped {
+	combo [toxicbubbles_bubbsflipped, toxicbubbles_jumpersflipped]
+}
+toxicbubbles_jumpersflipped {
+	#system properties
+	movieclip soliddrip2
+	max_particles 1000
+	layer 5
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate [1,2]
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime 1
+	initial_speed [10,12]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,40]
+	friction 1
+	size_start [1,2.0]
+	size_end  1
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+toxicbubbles_bubbsflipped {
+	#system properties
+	movieclip soliddrip2
+	max_particles 1000
+	layer 5
+	livebounds [-30, 84, -30, 62]
+	prewarm 0
+	batched true
+	
+	#emitter properties
+	emit_rate [20,40]
+	emit_amount 1
+	emit_direction [0, -1]
+	emit_spread 90
+	emit_box [1, 0]	  #54 for "level width", 32 for "level height"	
+	emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+	
+	#particle animation properties
+	particle_lifetime .3
+	initial_speed [5,8]
+	initial_rotation 0
+	rotation_speed 0
+	force [0,40]
+	friction 1
+	size_start [1,3]
+	size_end  1
+	alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
+	alpha_end 1
+	face_moving_direction true
+	speed_scale 0
+	inherit_speed 1
+	tags []
+}
+
+storm2 {
+	combo[fgrain2, bgrain2, lightning]
+}
+
+bgrain2 {
+    #system properties
+    movieclip soliddrip
+    max_particles 500
+    layer 0
+    livebounds [-20, 74, -10, 42]
     prewarm [20,6]
     batched true
     
     #emitter properties
-    emit_rate 10
-    emit_amount 3
-    emit_direction [0, 1]
+    emit_rate 25
+    emit_amount 10
+    emit_direction [-.6, -1]
     emit_spread 0
-    emit_box [54, 32]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
+    emit_box [70, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [35,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [0, 0]
+    particle_lifetime .5
+    initial_speed [60, 100]
     initial_rotation 0
     rotation_speed 0
-    force [0, 0]
+    force [-6, -10]
     friction 1
-    size_start [.5,.8]
-    size_end [.1,.3]
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags []
-}
-
-
-spark {
-    #system properties
-    movieclip spark2
-    max_particles 250
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [.2,1]
-    emit_amount [4,8]
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]
-    emit_offset [0,.5]
-    
-    #particle animation properties
-    particle_lifetime 5
-    initial_speed 10
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -10]
-    friction 1
-    size_start [.2,1]
+    size_start [.3,.45]
     size_end 1
     alpha_start 1
     alpha_end 1
     face_moving_direction true
-    speed_scale 0.12
+    speed_scale .5
     inherit_speed 0
-    tags [collide_tile]
+    tags [collide_water]
 }
 
-spark2 {
-    #system properties
-    movieclip spark2
-    max_particles 100
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [.5,1.5]
-    emit_amount [1,2]
-    emit_direction [0, -1]
-    emit_spread 45
-    emit_box [1, 0]
-    emit_offset [0,1.5]
-    
-    #particle animation properties
-    particle_lifetime 3
-    initial_speed 10
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -10]
-    friction 1
-    size_start [.1,.4]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0.2
-    inherit_speed 0
-    tags [collide_tile]
-}
-
-splash {
+fgrain2 {
     #system properties
     movieclip soliddrip
-    max_particles 800
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched true
-    
-    #emitter properties
-    emit_rate [5,6.5]
-    emit_amount [2,3]
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]
-    emit_offset [0,-.5]
-    
-    #particle animation properties
-    particle_lifetime [.5,1.5]
-    initial_speed [3,7]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -20]
-    friction 1
-    size_start [.1,.4]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale [1,2]
-    inherit_speed 1
-    tags []
-}
-
-waterfall {
-    combo [waterfall_parts, waterfall_distortion]
-}
-
-waterfall_parts {
-    #system properties
-    movieclip TestParticle2
     max_particles 500
     layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 3
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 2
-    initial_speed [30, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -250]
-    friction [.8, .9]
-    size_start 1
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .2
-    inherit_speed 0
-    tags [collide_tile, collide_water, player_bounce_waterfall]
-}
-
-waterfall_distortion {
-    #system properties
-    movieclip DistortionParticle2
-    max_particles 500
-    layer 6
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 1
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 2
-    initial_speed [30, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -250]
-    friction [.8, .9]
-    size_start 3
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 0
-    tags [collide_tile, collide_water, player_bounce_waterfall]
-}
-
-waterfall_splash {
-    combo [waterfall_splash_top, waterfall_splash_bottom]
-}
-
-waterfall_splash_top {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 4
-    emit_direction [0, 1]
-    emit_spread 70
-    emit_box [1.5, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime .5
-    initial_speed [5, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -40]
-    friction 1
-    size_start 1.5
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 1
-    tags [collide_water]
-}
-
-waterfall_splash_bottom {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 4
-    emit_direction [0, -1]
-    emit_spread 30
-    emit_box [1.5, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.4]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1
-    initial_speed [10, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 50]
-    friction [.85, .8]
-    size_start [1,3]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [collide_air, player_push_strong]
-}
-
-toxwaterfall {
-    combo [toxwaterfall_parts, toxwaterfall_distortion]
-}
-
-toxwaterfall_parts {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 10
-    emit_amount [5,10]
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1
-    initial_speed [5, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -20]
-    friction [.8, 1]
-    size_start [2,4]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .05
-    inherit_speed 0
-    tags [collide_tile, collide_water, player_bounce_waterfall]
-}
-
-toxwaterfall_distortion {
-    #system properties
-    movieclip DistortionParticle2
-    max_particles 500
-    layer 6
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 10
-    emit_amount [5,10]
-    emit_direction [0, -1]
-    emit_spread 0
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1
-    initial_speed [5, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -20]
-    friction [.8, 1]
-    size_start [3,5]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .05
-    inherit_speed 0
-    tags [collide_tile, collide_water, player_bounce_waterfall]
-}
-
-toxwaterfall_splash {
-    combo [toxwaterfall_splash_top, toxwaterfall_splash_bottom]
-}
-
-toxwaterfall_splash_top {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 10
-    emit_amount [10,20]
-    emit_direction [0, 1]
-    emit_spread 70
-    emit_box [1.5, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime .5
-    initial_speed [5, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -40]
-    friction 1
-    size_start 2.5
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 1
-    tags [collide_water]
-}
-
-surface_splash {
-    inherit waterfall_splash_top
-    emit_offset [0,-.5]
-}
-
-toxwaterfall_splash_bottom {
-    #system properties
-    movieclip goo2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 10
-    emit_amount [5,10]
-    emit_direction [0, -1]
-    emit_spread 30
-    emit_box [2.5, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.4]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 2
-    initial_speed [20, 60]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 20]
-    friction [.8, .7]
-    size_start [1,3]
-    size_end 5
-    alpha_start 1
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [collide_air, player_push_strong]
-}
-
-bubbles {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [1.5,2.5]
-    emit_amount [0,3]
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [0, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 10
-    initial_speed [0, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 10]
-    friction [.95, .95]
-    size_start [1,3]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [collide_air, player_push]
-}
-
-
-dust {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [.2,.7]
-    emit_amount [1,4]
-    emit_direction [1, 1]
-    emit_spread 90
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [1.5,2.5]
-    initial_speed [2, 4]
-    initial_rotation 0
-    rotation_speed 0
-    force [20, -4]
-    friction [.95, .959]
-    size_start [.5,2]
-    size_end  [0, .5]
-    alpha_start .5 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [player_push]
-}
-
-smoke {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 40
-    emit_amount [0,1]
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [2,3.5]
-    initial_speed [1, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 7]
-    friction [.95, .959]
-    size_start [4,8]
-    size_end  [0, .75]
-    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [player_push]
-}
-
-smoke2 {
-    #system properties
-    movieclip TestParticle2
-    max_particles 500
-    layer 0
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 40
-    emit_amount [0,1]
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,-.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [2,3.5]
-    initial_speed [1, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 7]
-    friction [.95, .959]
-    size_start [4,8]
-    size_end  [0, .75]
-    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [player_push]
-}
-
-cloudwind2 {
-    #system properties
-    movieclip WindCloud
-    max_particles 1000
-    layer 7
-    livebounds [-30, 84, -30, 62]
-    prewarm [20,12]
-    batched true
-    
-    #emitter properties
-    emit_rate 20
-    emit_amount 1
-    emit_direction [0, 1]
-    emit_spread 30
-    emit_box [64, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,-10]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 10
-    initial_speed [10, 20]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [1.5,6]
-    size_end  1
-    alpha_start .0225 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-cloudwind {
-    #system properties
-    movieclip WindCloud
-    max_particles 500
-    layer 7
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,12]
-    batched true
-    
-    #emitter properties
-    emit_rate 20
-    emit_amount 1
-    emit_direction [1, 0]
-    emit_spread 30
-    emit_box [0, 40]      #54 for "level width", 32 for "level height"    
-    emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 5
-    initial_speed [20, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [1.5,6]
-    size_end  1
-    alpha_start .024 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-cloudwind_heavy {
-    #system properties
-    movieclip WindCloud
-    max_particles 500
-    layer 7
-    livebounds [-10, 64, -10, 42]
+    livebounds [-20, 74, -10, 42]
     prewarm [20,6]
     batched true
     
     #emitter properties
-    emit_rate 40
-    emit_amount 1
-    emit_direction [1, 0]
-    emit_spread 30
-    emit_box [0, 40]      #54 for "level width", 32 for "level height"    
-    emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [2,3.5]
-    initial_speed [40, 80]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [1.5,6]
-    size_end  1
-    alpha_start .030 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-cloudwind_light {
-    #system properties
-    movieclip WindCloud
-    max_particles 500
-    layer 7
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,24]
-    batched true
-    
-    #emitter properties
-    emit_rate 13
-    emit_amount 1
-    emit_direction [1, 0]
-    emit_spread 30
-    emit_box [0, 40]      #54 for "level width", 32 for "level height"    
-    emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 10
-    initial_speed [5, 20]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [1.5,6]
-    size_end  1
-    alpha_start .012 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-lightingtest {
-    #system properties
-    movieclip Light
-    max_particles 500
-    layer 6
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,24]
-    batched false
-    
-    #emitter properties
-    emit_rate 2
-    emit_amount 1
-    emit_direction [1, 0]
-    emit_spread 30
-    emit_box [0, 40]      #54 for "level width", 32 for "level height"    
-    emit_offset [-10,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 10
-    initial_speed [5, 20]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [1.5,6]
-    size_end  1
-    alpha_start [0,1] #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-fallout {
-    #system properties
-    movieclip Leaf
-    max_particles 1000
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,48]
-    batched true
-    
-    #emitter properties
     emit_rate 250
-    emit_amount 1
-    emit_direction [-.2, -1]
-    emit_spread 20
-    emit_box [54, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 30
-    initial_speed [2, 4]
-    initial_rotation [0,360]
-    rotation_speed [-200, 200]
-    force [-.5, -.5]
-    friction 1
-    size_start [.5,1]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [collide_tile]
-}
-
-fallout2 {
-    #system properties
-    movieclip Leaf2
-    max_particles 1000
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm [20,48]
-    batched true
-    
-    #emitter properties
-    emit_rate 250
-    emit_amount 1
-    emit_direction [-.2, -1]
-    emit_spread 20
-    emit_box [54, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,32]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 30
-    initial_speed [2, 4]
-    initial_rotation [0,360]
-    rotation_speed [-200, 200]
-    force [-.5, -.5]
-    friction 1
-    size_start [.5,1]
-    size_end 1
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [collide_tile]
-}
-
-mist {
-    #system properties
-    movieclip TestParticle2
-    max_particles 1000
-    layer 7
-    livebounds [-30, 84, -30, 62]
-    prewarm [20,12]
-    batched true
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 5
-    emit_direction [0, -1]
-    emit_spread 20
-    emit_box [64, 42]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [0,15]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction .99
-    size_start [.1]
-    size_end  [200,400]
-    alpha_start .2 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-mist2 {
-    #system properties
-    movieclip TestParticle2
-    max_particles 1000
-    layer 7
-    livebounds [-30, 84, -30, 62]
-    prewarm [20,12]
-    batched true
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 5
-    emit_direction [0, -1]
-    emit_spread 20
-    emit_box [64, 42]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,16]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [0,5]
-    initial_rotation 0
-    rotation_speed 0
-    force 0
-    friction .99
-    size_start [.05]
-    size_end  [200,400]
-    alpha_start .03 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [player_push]
-}
-
-
-
-toxicbubbles {
-    combo [toxicbubbles_bubbs, toxicbubbles_jumpers]
-}
-
-toxicbubbles_bubbs {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 1000
-    layer 5
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched true
-    
-    #emitter properties
-    emit_rate [20,40]
-    emit_amount 1
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime .3
-    initial_speed [5,8]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-40]
-    friction 1
-    size_start [1,3]
-    size_end  1
-    alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags []
-}
-
-toxicbubbles_jumpers {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 1000
-    layer 5
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched true
-    
-    #emitter properties
-    emit_rate [1,2]
-    emit_amount 1
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,1]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1
-    initial_speed [10,12]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-40]
-    friction 1
-    size_start [1,2.0]
-    size_end  1
-    alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags []
-}
-
-lightning {
-    #system properties
-    movieclip Lightning
-    max_particles 10
-    layer 0
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate [.15,1.5]
-    emit_amount 1
-    emit_direction [0, 0]
-    emit_spread 360
-    emit_box [54, 10]      #54 for "level width", 32 for "level height"    
-    emit_offset [27,24]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.2, .5]
-    initial_speed 0
-    initial_rotation [-30, 30]
-    rotation_speed 0
-    force 0
-    friction 1
-    size_start [.5, 2]
-    size_end  1
-    alpha_start 3 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 0
-    tags [lightning_flash]
-}
-
-toxicdump_down {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 1000
-    layer 5
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched true
-    
-    #emitter properties
-    emit_rate 60
-    emit_amount 1
-    emit_direction [0, 0]
-    emit_spread 10
-    emit_box [1, 0]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,.5]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime 1.5
-    initial_speed 0
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-40]
-    friction [.95, .95]
-    size_start [.3,1]
-    size_end  2
-    alpha_start 1 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [collide_water, player_bounce_waterfall ]
-}
-
-toxicdump_right {
-    inherit toxicdump_down
-    
-    emit_direction [1, 0]
-    emit_box [0, 1]
-    emit_offset [-.5,0]
-    initial_speed 8
-}
-
-toxicdump_left {
-    inherit toxicdump_down
-    
-    emit_direction [-1, 0]
-    emit_box [0, 1]
-    emit_offset [.5,0]
-    initial_speed 8
-}
-
-
-###############################################
-################################################
-#################################################
-##################################################
-### TRIGGERED PARTICLE EFFECTS AFTER THIS BREAK ###
-##################################################
-#################################################
-################################################
-###############################################
-
-PlayerCollide_Wall {
-    #system properties
-    movieclip soliddrip
-    max_particles 100
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
     emit_amount 20
-    emit_direction [1, 0]
-    emit_spread 60
-    emit_box [1, 0]      
-    emit_offset [0,-.35]  
+    emit_direction [-.6, -1]
+    emit_spread 0
+    emit_box [70, 0]      #54 for "level width", 32 for "level height"    
+    emit_offset [35,34]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
     
     #particle animation properties
-    particle_lifetime [.5, .7]
-    initial_speed [-20, 20]
+    particle_lifetime .5
+    initial_speed [60, 100]
     initial_rotation 0
     rotation_speed 0
-    force [0,0]
-    friction .8
-    size_start [1,2]
-    size_end  0
-    alpha_start .4 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [bounce_tile]
-}
-
-PlayerCollide_Up {
-    inherit PlayerCollide_Wall
-    
-    emit_direction [1, 0]
-    emit_box [1, 0]
-    emit_offset [0,.35]
-}
-PlayerCollide_Down4 {
-    inherit PlayerCollide_Wall
-    
-    emit_amount 60
-    initial_speed [-50, 50]
-    emit_direction [1, 0]
-    emit_box [1, 0]
-    emit_offset [0,-.35]
-}
-PlayerCollide_Down3 {
-    inherit PlayerCollide_Wall
-    
-    emit_amount 45
-    initial_speed [-40, 40]
-    emit_direction [1, 0]
-    emit_box [1, 0]
-    emit_offset [0,-.35]
-}
-PlayerCollide_Down2 {
-    inherit PlayerCollide_Wall
-    
-    emit_amount 30
-    initial_speed [-30, 30]
-    emit_direction [1, 0]
-    emit_box [1, 0]
-    emit_offset [0,-.35]
-}
-PlayerCollide_Down1 {
-    inherit PlayerCollide_Wall
-    
-    emit_amount 15
-    initial_speed [-15, 15]
-    emit_direction [1, 0]
-    emit_box [1, 0]
-    emit_offset [0,-.35]
-}
-PlayerCollide_Left {
-    inherit PlayerCollide_Wall
-    
-    emit_direction [0, 1]
-    emit_box [0, 1]
-    emit_offset [-.35,0]
-}
-PlayerCollide_Right {
-    inherit PlayerCollide_Wall
-    
-    emit_direction [0, 1]
-    emit_box [0, 1]
-    emit_offset [.35,0]
-}
-
-
-PlayerJump_Poof {
-    #system properties
-    movieclip soliddrip
-    max_particles 100
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 20
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.2, .2]     
-    emit_offset [0,0]  
-    
-    #particle animation properties
-    particle_lifetime [.7, .9]
-    initial_speed [0, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .9
-    size_start [1,2]
-    size_end  0
-    alpha_start .4 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed [0,.5]
-    tags [bounce_tile]
-}
-
-PlayerJump {
-    combo [PlayerJump_Poof, PlayerCollide_Down1]
-}
-PlayerLedgeJump {
-    combo [PlayerJump_Poof]
-}
-
-PlayerDeath_Pop2 {
-    #system properties
-    movieclip soliddrip
-    max_particles 100
-    layer 1
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 70
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1.7, 2.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .88
-    size_start [.5, 3]
-    size_end  0
-    alpha_start .7 
-    alpha_end .5
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [bounce_tile]
-}
-
-PlayerDeath_Pop {
-    #system properties
-    movieclip blackpart
-    max_particles 100
-    layer 1
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 90
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 30]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.5, 4]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 1
-    tags [bounce_tile]
-}
-PlayerDeath_Gibs {
-    #system properties
-    movieclip Gibs
-    max_particles 100
-    layer 1
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched true
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 15
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]   
-    emit_offset [0,0]  
-    
-    #particle animation properties
-    particle_lifetime [.5, 2]
-    initial_speed [5, 15]
-    initial_rotation [0, 360]
-    rotation_speed [-1080, 1080]
-    force [0,-30]
+    force [-6, -10]
     friction 1
-    size_start 1.2
-    size_end  .9
-    alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-PlayerDeath {
-    combo [PlayerDeath_Pop, PlayerDeath_Pop2, PlayerDeath_Gibs]
-}
-
-
-
-PlayerSplash_Top {
-    #system properties
-    movieclip TestParticle2
-    max_particles 300
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 100
-    emit_direction [0, 1]
-    emit_spread 70
-    emit_box [1.5, 0]   
-    emit_offset [0,.1] 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 15]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -40]
-    friction 1
-    size_start 1.5
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 0
-    tags [collide_water]
-}
-
-PlayerSplash_Bottom {
-    #system properties
-    movieclip TestParticle2
-    max_particles 300
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 100
-    emit_direction [0, -1]
-    emit_spread 50
-    emit_box [1, 0]    
-    emit_offset [0,-.1] 
-    
-    #particle animation properties
-    particle_lifetime [1, 2]
-    initial_speed [0, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 20]
-    friction .9
-    size_start [1,3]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed [0,.3]
-    tags [collide_air, player_push]
-}
-
-PlayerSplash_Top_Out { 
-    inherit PlayerSplash_Top
-    inherit_speed [0,1]
-    initial_speed [0, 5]
-    emit_box [0.4, 0]
-    initial_speed [0, 5]  
-}
-
-PlayerSplash_In {
-    combo [PlayerSplash_Top, PlayerSplash_Bottom]
-}
-PlayerSplash_Out {
-    combo [PlayerSplash_Top_Out]
-}
-
-
-PlayerSplashTox_Top {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 300
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 50
-    emit_direction [0, 1]
-    emit_spread 70
-    emit_box [1.5, 0]   
-    emit_offset [0,.1] 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 15]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -40]
-    friction .95
-    size_start 2
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 0
-    tags [collide_water]
-}
-
-PlayerSplashTox_Bottom {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 300
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 50
-    emit_direction [0, -1]
-    emit_spread 50
-    emit_box [1, 0]    
-    emit_offset [0,-.1] 
-    
-    #particle animation properties
-    particle_lifetime [1, 2]
-    initial_speed [0, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 20]
-    friction .9
-    size_start [2,4]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed [0,.3]
-    tags [collide_air, player_push]
-}
-
-PlayerSplashTox_Top_Out {
-    inherit PlayerSplashTox_Top
-    inherit_speed [0,1]
-    initial_speed [0, 5]
-}
-
-PlayerSplashTox_In {
-    combo [PlayerSplashTox_Top, PlayerSplashTox_Bottom]
-}
-PlayerSplashTox_Out {
-    combo [PlayerSplashTox_Top_Out]
-}
-
-
-PlayerSplashUltraTox_Top {
-    #system properties
-    movieclip ToxicParticle
-    max_particles 300
-    layer 5
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 50
-    emit_direction [0, 1]
-    emit_spread 90
-    emit_box [1, 0]   
-    emit_offset [0,.1] 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 15]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -40]
-    friction .95
-    size_start 2
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction true
-    speed_scale .1
-    inherit_speed 0
-    tags [collide_water]
-}
-
-PlayerSplashUltraTox_In {
-    combo [PlayerSplashUltraTox_Top]
-}
-PlayerSplashUltraTox_Out {
-    combo [PlayerSplashUltraTox_Top]
-}
-
-
-
-
-
-Fireball_Smoke {
-    movieclip TestParticle2
-    max_particles 300
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [20, 40]
-    emit_amount [1,2]
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.7, .7]
-    emit_offset [0,0]
-    
-    #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [0, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 0]
-    friction .95
-    size_start [3,8]
-    size_end 0
-    alpha_start .7
-    alpha_end 1
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed .1
-    tags [player_push]
-}
-
-Fireball_Sparks {
-    movieclip spark
-    max_particles 300
-    layer 1
-    livebounds [-10, 64, -10, 42]
-    batched false
-    
-    #emitter properties
-    emit_rate [20, 40]
-    emit_amount [1,2]
-    emit_direction [0, 1]
-    emit_spread 30
-    emit_box [.7, .7]
-    emit_offset [0,0]
-    
-    #particle animation properties
-    particle_lifetime [1,2]
-    initial_speed [0, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, -10]
-    friction .95
-    size_start [2,3]
-    size_end 0
-    alpha_start 1
-    alpha_end 1
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed .3
-    tags [player_push]
-}
-
-Fireball {
-    combo [Fireball_Sparks, Fireball_Smoke]
-}
-
-
-EnemyDeath_Pop {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 20]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 3]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-EnemyDeath {
-    combo [EnemyDeath_Pop]
-}
-
-
-BulletPop {
-    #system properties
-    movieclip bulletretro
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 10
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.1, .1]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.2, .5]
-    initial_speed [0, 20]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .90
-    size_start [.7, 1]
-    size_end  0
-    alpha_start .6 
-    alpha_end .4
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [bounce_tile]
-}
-
-SpitBulletPop {
-    #system properties
-    movieclip TestParticle2
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 20
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.1, .1]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 10]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-20]
-    friction .90
-    size_start [1, 3]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [bounce_tile]
-}
-
-
-PlayerLand_Cloud {
-    #system properties
-    movieclip cloud
-    max_particles 100
-    layer 3
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 20
-    emit_direction [1, 0]
-    emit_spread 60
-    emit_box [1, 0]      
-    emit_offset [0,-.35]  
-    
-    #particle animation properties
-    particle_lifetime [.4, 1.5]
-    initial_speed [-20, 30]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-20]
-    friction .8
-    size_start [3,5]
-    size_end  0
-    alpha_start 3
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags []
-}
-
-
-
-
-PlayerAir_Gibs {
-    #system properties
-    movieclip Gibs2
-    max_particles 100
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate [1, 5]
-    emit_amount 1
-    emit_direction [0, 1]
-    emit_spread 180
-    emit_box [.35, .35]   
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.5, 2]
-    initial_speed [2, 5]
-    initial_rotation [0, 360]
-    rotation_speed [-1080, 1080]
-    force [0,-10]
-    friction 1
-    size_start .7
-    size_end  .6
-    alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 0
-    tags [dampened_bounce_tile]
-}
-
-PlayerDrowning_Gibs {
-    inherit PlayerAir_Gibs
-    emit_rate [5, 10]
-}
-
-
-PlayerDrownPulse {
-    inherit PlayerAir_Gibs
-    emit_rate 0
-    emit_amount 50
-    initial_speed [5, 10]
-    
-    particle_lifetime [.2, .4]
-}
-
-
-
-FallingPlatform_Rocks {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate [.5, 1]
-    emit_amount 1.5
-    emit_direction [0, 1]
-    emit_spread 180
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.8, 1.5]
-    initial_speed [3, 5]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [0, -30]
-    friction 1
-    size_start 1
+    size_start [.3,.45]
     size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags []
-}
-
-FallingPlatform_Dust {
-    #system properties
-    movieclip TestParticle
-    max_particles 1000
-    layer 3
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 20
-    emit_direction [1, 0]
-    emit_spread 360
-    emit_box [1, 1]      
-    emit_offset [0,0]  
-    
-    #particle animation properties
-    particle_lifetime [.2, 1.3]
-    initial_speed [-15, 15]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .9
-    size_start [2,5]
-    size_end  0
     alpha_start 1
-    alpha_end 0
+    alpha_end 1
     face_moving_direction true
-    speed_scale 0
+    speed_scale .5
     inherit_speed 0
-    tags []
-}
-
-BreakyBlock_Destroy {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 40
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1.5]
-    initial_speed [3, 6]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [0, -30]
-    friction 1
-    size_start 1
-    size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-SmashyBlock_Destroy {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 40
-    emit_direction [0, 1]
-    emit_spread 270
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1.5]
-    initial_speed [7, 10]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [0, -30]
-    friction 1
-    size_start 1
-    size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-
-Explode {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 55
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [1.5, 2.5]
-    initial_speed [20, 30]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [10, -80]
-    friction 1
-    size_start [1,2]
-    size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-
-MineSmoke {
-    movieclip cloud
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 100
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.5, .75]
-    initial_speed [0, 60]
-    initial_rotation 0
-    rotation_speed 0
-    force [0, 30]
-    friction .75
-    size_start [1, 4]
-    size_end  [.5, 2.5]
-    alpha_start [.1, .2] 
-    alpha_end 0
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-MineExplode {
-combo [Explode, MineSmoke]    
-}
-
-
-CollectLife {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 40
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 25]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-
-CollectBigLife {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-CollectKey {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 15
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 30]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 1.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-
-CollectHead {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-CollectBody {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-CollectHeart {
-       #system properties
-    movieclip bulletretro
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-10]
-    friction .87
-    size_start [.4, .8]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-CollectCart {
-    #system properties
-    movieclip bulletretro
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-10]
-    friction .87
-    size_start [.4, .8]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-BackWarp_Enter {
-    #system properties
-    movieclip blackpart
-    max_particles 100
-    layer 1
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched true
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 15
-    emit_direction [0, 1]
-    emit_spread 180
-    emit_box [.35, .35]   
-    emit_offset [0,0]  
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [6, 15]
-    initial_rotation [0, 360]
-    rotation_speed [-1080, 1080]
-    force [0,-30]
-    friction 1
-    size_start [.6, 2]
-    size_end  [.4, 1]
-    alpha_start 5 #more than one alpha just means its full alpha for longer before it fades out
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-
-EnemyBounce_Trail {
-    #system properties
-    movieclip cloud
-    max_particles 100
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 10
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.2, .2]     
-    emit_offset [0,.35]  
-    
-    #particle animation properties
-    particle_lifetime [.7, .9]
-    initial_speed [0, 5]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .9
-    size_start [1,2]
-    size_end  0
-    alpha_start .4 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed [0,.8]
-    tags [bounce_tile]
-}
-
-EnemyBounce_Poof {
-    #system properties
-    movieclip cloud
-    max_particles 100
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 10
-    emit_direction [1, 0]
-    emit_spread 30
-    emit_box [1, 0]      
-    emit_offset [0,.35]  
-    
-    #particle animation properties
-    particle_lifetime [.5, .7]
-    initial_speed [-30, 30]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .8
-    size_start [1,2]
-    size_end  0
-    alpha_start .4 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed 0
-    tags [bounce_tile]
-}
-
-EnemyBounce {
-    combo [EnemyBounce_Poof, EnemyBounce_Trail]
-}
-
-
-CritterDeath {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 20
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,0]   
-    
-    #particle animation properties
-    particle_lifetime [.6, 1]
-    initial_speed [0, 13]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.3, 1.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-PlaceBody {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,1]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-PlaceHead {
-    #system properties
-    movieclip blackpart
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,1]   
-    
-    #particle animation properties
-    particle_lifetime [1, 1.5]
-    initial_speed [0, 40]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,0]
-    friction .82
-    size_start [.4, 2.5]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-PlaceHeart {
-    #system properties
-    movieclip bulletretro
-    max_particles 300
-    layer 2
-    livebounds [-30, 84, -30, 62]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 60
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [.35, .35]     
-    emit_offset [0,1]   
-    
-    #particle animation properties
-    particle_lifetime [.5, 1]
-    initial_speed [0, 50]
-    initial_rotation 0
-    rotation_speed 0
-    force [0,-10]
-    friction .87
-    size_start [.4, .8]
-    size_end  0
-    alpha_start 1 
-    alpha_end 1
-    face_moving_direction true
-    speed_scale 0
-    inherit_speed .5
-    tags [bounce_tile]
-}
-
-ChainTile_Open {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 40
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1.5]
-    initial_speed [3, 6]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [0, -30]
-    friction 1
-    size_start 1
-    size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
-}
-
-LockTile_Open {
-    movieclip Rock2
-    max_particles 500
-    layer 2
-    livebounds [-10, 64, -10, 42]
-    prewarm 0
-    batched false
-    
-    #emitter properties
-    emit_rate 0
-    emit_amount 40
-    emit_direction [0, 1]
-    emit_spread 360
-    emit_box [1, 1]      #54 for "level width", 32 for "level height"    
-    emit_offset [0,0]   #27,16 for middle of the level. 0,0 for bottom left. 54,32 for upper right. this one sets it as a strip at the top 
-    
-    #particle animation properties
-    particle_lifetime [.5, 1.5]
-    initial_speed [3, 6]
-    initial_rotation [0,360]
-    rotation_speed [-1080, 1080]
-    force [0, -30]
-    friction 1
-    size_start 1
-    size_end 1
-    alpha_start 5
-    alpha_end 0
-    face_moving_direction false
-    speed_scale 0
-    inherit_speed 1
-    tags [dampened_bounce_tile]
+    tags [collide_tile, collide_water]
 }

@@ -199,4 +199,121 @@ NPCH3 {
     ]
 }
 
+NPC_mines_1  {
+#fucked up drainage
+    movieclip NPC4
+	sound_id NPCSkull
+	text [
+	    "\n. . ."
+		". . .\nmmhh?"
+		"\noh, hi there"
+		"i didn't know\nwe were getting\nnew employees"
+		"that's nice\ni guess\n. . ."
+		". . .\nurggh\n. . ."
+		"why even bother\nat this point"
+		"this site is\nin complete ruin"
+		". . .\nunless\n. . ."
+		"do you know\nhow to swim?"
+		"our drainage system\nmust be clogged"
+		"maybe if you can\nfix it and\ndrain the water"
+		"you could explore the\n rest of the site"
+		"not sure why\nwould you need to"
+		"but it's that\nor watching\nthe grass grow"
+		"so why don't you\ngive it a shot"
+	]
+}
+
+NPC_mines_1x  {
+#drainage fixed lets go
+    movieclip NPC4
+	sound_id NPCSkull
+	text [
+	    "\n. . ."
+        "\noh wow . . ."
+		"you're still alive,\nwas not\nexpecting that"
+		"\ngood job . . ."
+		"i guess that means\nyou fixed\nthe drainage system"
+		"so you can\nleave now!"
+		"\n. . ."
+		"i guess\nthis is a goodbye\n. . ."
+		"atleast i can\nfinally retire"
+	]
+}
+
+NPC_mines_2  {
+#ancestor trauma ass mf
+    movieclip NPC_en2
+	sound_id NPCBlob
+	text [
+	    "i don't think\ni can do this\nanymore"
+		"i wanted to\leave so badly"
+		"\nbut . . ."
+		"what we found\ndown there is\n. . ."
+		"\n. . ."
+        "this place is\nfucked up man"
+	]
+}
+
+NPC_mines_3  {
+#scotsman
+    movieclip NPC_hanged
+	sound_id NPCBlob
+	text [
+	    "huh?\n. . .\nwho's thare"
+		"\n. . ."
+	    "ye cannae\nreach tae\nmah eyes?"
+		"\nya little Scooner"
+		"\nClype-Dreep-Bachle"
+		"\nBleathering"
+		"\nGomeril"
+		"\nJessie"
+		"\nOaf-Looking"
+		"\nNyaff"
+		"\nPlookie"
+		"\nShan"
+		"\nMilk-Drinking"
+		"\nMim-Moothed"
+		"\nSniveling"
+		"\nWorm-Eyed"
+		"\nHotten-Blaugh"
+		"\nVile-Stoochie"
+		"\nCally-Breek-Tattie!"
+	]
+}
+
+NPC_mines_4  {
+#pre train npc
+    movieclip NPC5
+	sound_id NPCSkull
+	text [
+	    "\nthat's, weird?"
+		"our freight train\nis moving again. . ."
+		"\n. . ."
+		"WHAT ARE YOU\nWAITING\nLAZY ASS!"
+		"hop in, we can't\nleave anyone behind"
+		"\n. . ."
+		"urgh. . .\nmy boss is gonna\nkill me for this"
+	]
+}
+
+NPC_mines_5  {
+#final part of the train
+    movieclip NPC_en6
+	sound_id NPCBlob
+	text [
+        "wha. . .\nwho are you?"
+		"\nurhg, forget it"
+		"\n. . ."
+		"did you\nsee her too?"
+		"\n. . ."
+		"the silent type?\nHA HA. . .\nit's fine"
+		"we just need\nto get as far\nas posible"
+		"i already have many\nplans to beat her"
+		"i just nedded\nsome time. . ."		
+		"thankfully i found the\nkeys to this train\nin a coffee mug!"
+		"\n. . ."
+		"you want em?\nwell. . ."
+		"you'll need to take\n them from my\ndead hands! HA HA!"
+	]
+}
 
