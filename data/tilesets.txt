@@ -64,9 +64,9 @@ base {
     tile_particle_1 drip
     tile_particle_2 splash
     
-    npc_1 CryingNPC
-    npc_2 WetFloorNPC
-    npc_3 BruiseNPC
+    npc_1 NPCBA1
+    npc_2 NPCBA2
+    npc_3 NPCBA3
     decoration_1 Decoration0
     decoration_2 Decoration1
     decoration_3 inst10
@@ -469,7 +469,7 @@ finxx {
 	overlay_graphics Overlayshell
 	background_graphics bg_enana1
 	foreground_graphics None
-	palette 6
+	palette 7
 
     fx_shader reflectionripples
 	fx_shader_mid lightingmodded2
@@ -990,7 +990,7 @@ finxx {
 	overlay_graphics Overlayshell
 	background_graphics bgsolid
 	foreground_graphics None
-	palette 6
+	palette 7
 
     fx_shader reflectionripples
 	fx_shader_mid lightingmodded2
@@ -1038,7 +1038,7 @@ finxx {
 	}
 	
 	5 {
-	   palette 7
+	   palette 8
 
 	   background_graphics bg_enana1
 	
@@ -1058,7 +1058,7 @@ finxx {
 	}
 	
 	6 {
-	   palette 7
+	   palette 8
 
 	   background_graphics bg_enana1
 	
