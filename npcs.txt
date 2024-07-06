@@ -1,0 +1,340 @@
+TestNPC {
+#basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        "dude what \nthe fuck \nman..."
+    ]
+}
+
+NPCBA1 {
+#upside down crying
+    movieclip NPCBA1
+    sound_id NPCBlob
+    text [
+        "ah...\nnew face?"
+        "better hand over\nthat map, recruit!"
+        "dont want you\nwandering too far,\nafter all."
+        "gonna need you to\nhead to your right\nto see the boss."
+        "dont pay the\n...machinations\nany mind,"
+        "theyre...\nEXPERIMENTAL."
+        "long live the\nrevolution!"
+    ]
+}
+
+NPCBA2 {
+#wet floor sign
+    movieclip NPCBA2
+    sound_id none
+    text [
+        "CAUTION!\n\nWet Floor"
+    ]
+}
+
+NPCBA3 {
+#bruise the giant
+    movieclip NPCBA3
+    sound_id none
+    text [
+        ". . .\nLITTLE MOUSE?"
+        "I HAVE FAVOR\nTO ASK OF YOU."
+        "FORMER LAW HAVE\nSEALED AWAY\nMANY SECRETS."
+        "BUT THEY HIDE\nFOR NOT MUCH\nLONGER."
+        "WE BREAK DOWN\nDOORS... BUT IT\nTAKE LONG TIME."
+        "SO I SEND\nIN SCAVENGERS\nTO FIND KEYS."
+        "LITTLE SUCCESS...\nBUT PERHAPS YOU\nARE DIFFERENT?"
+        "FIND # KEYS\nAND YOU WILL\nBE HONOROUS."
+        "MEET IN RIGHT\nSIDE OF BASEMENT\nWHEN YOU ARE DONE."
+    ]
+}
+
+GlideNPC {
+#basic sideways
+    movieclip NPC0
+    sound_id NPCSkull
+    text [
+        "i havent seen\na bird in so\nlong . . ."
+        "pretty please,\ncould you glide\nfor me?"
+    ]
+}
+
+CaretakerNPC {
+    movieclip NPC16
+    sound_id NPCSkull
+    text [
+	"\noh . . ."
+	"this place is not\nfor your kind."
+        "your spirit will\nnot be spared."
+        "your resolve will\nbe whisked away."
+        "your life will\ncease to exist.\n. . ."
+        "little lamb\n. . ."
+    ]
+}
+
+FlightNPC {
+    movieclip NPCG3
+    sound_id NPCGhost
+    text [
+	"\ncan you feel it?"
+	"your soul being\ndrawn towards\n. . ."
+	"SPIRITUAL\nANNIHILATION!"
+	"\n. . ."
+	"while in the air,\ntry diving!"
+	"you'll give into the\nfeeling and ascend!"
+	"it may feel\nstrange at first\n. . ."
+	"but with time\nitll be second\nnature . . ."
+	"\nwink wink!"
+	]
+}
+
+SecretTinnitusNPC {
+    movieclip NPCG6
+    sound_id NPCGhost
+    text [
+	". . .\nthe bell\n. . ."
+	"it calls out to us \n. . ."		
+        "from far and wide,\neven if we hide"
+	"its faint ringing\ncan still be heard\n. . ."
+	"ever present hope\n. . .\nin a hopeless world"
+	"\n. . ."
+	"you can hear\nit too?"
+	"\n. . ."
+	"\nmust be tinnitus..."
+	]
+}
+
+SecretBellDenierNPC {
+    movieclip NPC6
+    sound_id NPCSkull
+    text [
+	"\nhuh?"
+	"what are you\ndoing here?"
+	"whats this about\na bell?"
+	"we never had\na bell."
+	"\n. . ."
+	"\ntake my advice"
+	"grab a seat\nsomewhere and\nenjoy the view"
+	"at least while\ntheres still a\nview to enjoy..."
+	]
+}
+
+NonexistentNPC {
+    movieclip NPCG1
+    sound_id NPCGhost
+    text [
+	"almost there\n. . ."
+	"just have to get\nto the top of\nthis tower"
+	"then ill no\nlonger exist!"
+	"ill forget all\nof the stuff ive\ndone and seen..."
+	"nothingness\n. . ."
+	"just like how it\nwas before i was born!"
+	]
+}
+
+QuitterNPC {
+    movieclip NPCG4
+    sound_id NPCGhost
+    text [
+	"\n. . ."
+	"i can't do it\n. . ."
+	"i came all this way\n. . ."
+	"\n. . ."
+	"i dont want to\nbe gone . . ."
+	"i like being me\n. . ."
+	"i dont want to\nnot exist . . ."
+	"\n. . ."
+	"even after the\nworld ends . . ."
+	"i still want to\nbe in it . . ."
+	"\n. . ."
+	"what is wrong\nwith me?"
+	]
+}
+
+NPCFA1 {
+#basic sideways
+    movieclip NPCFA1
+    sound_id NPCBlob
+    text [
+        "you . . . \nFUCKER."
+        "that key is \nmine! i called \ndibs!"
+        "youre dead, kid. im\n a fucking Abyss\n belt in Krav Maga"
+        "and if you touch \nthat trinket ill \ndevolve you into"
+        "a goddamn newt. \nyou are so \nFUCKED."
+        "fuck, i might \neven do a backflip \nor something."
+        "as soon as i \ngather enough chi \nto recapitate,"
+        "YOU\nARE\nDONE!"
+        "\n. . ."
+        "just . . .\ngive it to me\n. . ." 
+    ]
+}
+
+NPCH1 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "do you see banana man"
+    ]
+    
+    alt_text [
+        "thousand tumors\nunder by\nv3slimeman"
+    ]
+}
+
+NPCH2 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "hopping over on the white hot sand"
+    ]
+    
+    alt_text [
+        "soul catalyst\nby therotbot"
+    ]
+}
+
+NPCH3 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "here he come with some for me"
+    ]
+    
+    alt_text [
+        "frozen abyss\nby yves"
+    ]
+}
+
+NPCH4 {
+#portal
+    movieclip NPCH4
+    sound_id NPCSteven
+    text [
+        "freshly taken from banana tree"
+    ]
+    
+    alt_text [
+        "flooded tunnels\nby enana blanca"
+    ]
+}
+
+NPC_mines_1  {
+#fucked up drainage
+    movieclip NPC4
+	sound_id NPCSkull
+	text [
+	    "\n. . ."
+		". . .\nmmhh?"
+		"\noh, hi there"
+		"i didnt know\nwe were getting\nnew employees"
+		"that's nice\ni guess\n. . ."
+		". . .\nurggh\n. . ."
+		"why even bother\nat this point"
+		"this site is\nin complete ruin"
+		". . .\nunless\n. . ."
+		"do you know\nhow to swim?"
+		"our drainage system\nmust be clogged"
+		"maybe if you can\nfix it and\ndrain the water"
+		"you could explore the\n rest of the site"
+		"not sure why\nwould you need to"
+		"but its that\nor watching\nthe grass grow"
+		"so why don't you\ngive it a shot"
+	]
+}
+
+NPC_mines_1x  {
+#drainage fixed lets go
+    movieclip NPC4
+	sound_id NPCSkull
+	text [
+	    "\n. . ."
+        "\noh wow . . ."
+		"you're still alive,\nwas not\nexpecting that"
+		"\ngood job . . ."
+		"i guess that means\nyou fixed\nthe drainage system"
+		"so you can\nleave now!"
+		"\n. . ."
+		"i guess\nthis is a goodbye\n. . ."
+		"atleast i can\nfinally retire"
+	]
+}
+
+NPC_mines_2  {
+#ancestor trauma ass mf
+    movieclip NPC_en2
+	sound_id NPCBlob
+	text [
+	    "i dont think\ni can do this\nanymore"
+		"i wanted to\nleave so badly"
+		"\nbut . . ."
+		"what we found\ndown there is\n. . ."
+		"\n. . ."
+        "this place is\nfucked up man"
+	]
+}
+
+NPC_mines_3  {
+#scotsman
+    movieclip NPC_hanged
+	sound_id NPCBlob
+	text [
+	    "huh?\n. . .\nwhos thare"
+		"\n. . ."
+	    "ye cannae\nreach tae\nmah eyes?"
+		"\nya little Scooner"
+		"\nClype-Dreep-Bachle"
+		"\nBleathering"
+		"\nGomeril"
+		"\nJessie"
+		"\nOaf-Looking"
+		"\nNyaff"
+		"\nPlookie"
+		"\nShan"
+		"\nMilk-Drinking"
+		"\nMim-Moothed"
+		"\nSniveling"
+		"\nWorm-Eyed"
+		"\nHotten-Blaugh"
+		"\nVile-Stoochie"
+		"\nCally-Breek-Tattie!"
+	]
+}
+
+NPC_mines_4  {
+#pre train npc
+    movieclip NPC5
+	sound_id NPCSkull
+	text [
+	    "\nthats, weird?"
+		"our freight train\nis moving again. . ."
+		"\n. . ."
+		"WHAT ARE YOU\nWAITING\nLAZY ASS!"
+		"hop in, we cant\nleave anyone behind"
+		"\n. . ."
+		"urgh. . .\nmy boss is gonna\nkill me for this"
+	]
+}
+
+NPC_mines_5  {
+#final part of the train
+    movieclip NPC_en6
+	sound_id NPCBlob
+	text [
+        "wha. . .\nwho are you?"
+		"\nurhg, forget it"
+		"\n. . ."
+		"did you\nsee her too?"
+		"\n. . ."
+		"the silent type?\nHA HA. . .\nits fine"
+		"we just need\nto get as far\nas posible"
+		"i already have many\nplans to beat her"
+		"i just needed\nsome time. . ."		
+		"thankfully i found the\nkeys to this train\nin a coffee mug!"
+		"\n. . ."
+		"you want em?\nwell. . ."
+		"you'll need to take\n them from my\ndead hands! HA HA!"
+	]
+}
+

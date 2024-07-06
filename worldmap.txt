@@ -1,0 +1,124 @@
+pages {
+    lightworld {
+        collectibles 238 //lives + biglives + carts + bodyparts (used for "percent complete" display)
+    }
+    
+    darkworld {
+        collectibles 7 //lives + biglives + carts + bodyparts (used for "percent complete" display)
+    }
+    
+    console {
+        collectibles 0 //lives + biglives + carts + bodyparts
+    }
+}
+
+meta {
+    default_node Ash
+    
+    leftwipes [2-0 3-1 4-1hub 4b-1 5b-1 2d-0 3d-1]
+    rightwipes [1-20 2-19 3-20 4-1hub 4b-15 1d-20 2d-19]
+    upwipes [4-1hub 4a-16 4c-1 5c-1 6-1 7-0 4b-15]
+    downwipes [4-1hub 4c-15 5a-1 3d-23 4a-1 5bxu-5 6-21]
+    
+    stevenheads [NPCH1 NPCH2 NPCH3 NPCH4]
+    steventhreshtumors [0 0 0 0]
+    stevenlevels [ttu-0 sc-1 fa-1 4c-0]
+    
+    mainworlds [1 tf bb sc fa 4c] //if you pause on these worlds, it lets you open the map. otherwise you get "exit area"
+    cartworlds [c1 c2 c3 c4a c4b c4c c5a c5b c5c c6 g0 g1 g2 g3 g4 g5 g6 g9 i1 i2 i3 i4 i5] //launch console automatically when you exit from these worlds
+    
+    headlevel 5a-22
+    bodylevel 5c-21
+    heartlevel 5b-23
+    
+    mute_warpunlock_message [ttu-21 sc-20 fa-15 ft-18] //levels that have a warp point but shouldnt show the "warp point unlocked" message
+    
+    game_over_checkpoints [[1d 1d-1] [2d 2d-0] [3d 3d-1] [6 6-1]] //if you game over in world "1d", spawn back to 1d-1, etc. this only matters when loading from a save file, otherwise it uses the last checkpoint you visited
+    iron_cart_entrypoints [i1-1 i2-1 i3-1 i4-1 $i1-1] //used to set the respawn point in an iron cart
+    timed_cart_entrypoints [g5-1] //maybe you want to put a timer on other carts?
+    console_entry_levels [1-1 1d-1]
+    nevermore_entry 7-0
+    escape_entry 6-21
+    nevermore_tumorthresh 450
+    timer_bypass_levels [6-1]
+    timer_buttonopen_levels [9x-6] //if the timer is open, button4 has its state toggled in these rooms
+    
+    megacart_entry_levels [$c1-1]
+    towercart_entry_levels [$i1-1]
+    cart_lives_overrides [[$c1-1 39]]
+    cart_title_overrides [[$c1-1 "AllStars"] [$i1-1 "Acceptance"]]
+    
+    savefile_completion_counter_max 285 //count of total collectible tumors, carts, body parts (3), cart achievements, map warp points (number of levels in the array below), and endings (2)
+    savefile_completion_warpoints [1-1 2-0 3-1 4a-1 4b-1 4c-1 5a-1 5b-1 5c-1 4-1hub 1d-1 2d-0 3d-1 6-1 6-21 7-0] //visiting these levels counts for save file completion
+    save_initiallevel c9-0
+    save_lightspawn 1-1
+    save_darkspawn 1d-1
+    save_lightspawnlabel "The End"  //since the game can set your save to these levels without visiting them, their names need to be manually set so they show up on the save
+    save_darkspawnlabel "Anguish"
+    
+    
+}
+
+nodes {
+    Ash {
+        clipname start
+        entrylevel tf-1
+        page lightworld
+        unlock_condition always_unlocked
+        
+        left Intersection1
+        right Intersection2
+ 
+    }
+
+    Intersection1 {
+        clipname intersection1
+        entrylevel none
+        page lightworld
+        unlock_condition always_unlocked
+        
+        right Ash
+        down FrozenAbyss
+        select Intersection1
+    }
+
+    Intersection2 {
+        clipname intersection2
+        entrylevel none
+        page lightworld
+        unlock_condition always_unlocked
+        
+        up SoulCatalyst
+        left Ash
+        down FloodedTunnels
+        select Intersection2
+    }
+
+    SoulCatalyst {
+        clipname soul
+        entrylevel sc-1
+        page lightworld
+        levelgroups [sc scx]
+        
+        down Intersection2
+    }
+
+    FrozenAbyss {
+        clipname abyss
+        entrylevel fa-1
+        page lightworld
+        levelgroups fa
+        
+        up Intersection1
+    }
+
+    FloodedTunnels {
+        clipname flooded
+        entrylevel 4c-1
+        page lightworld
+        levelgroups [4c 4cx]
+        
+        up Intersection2
+    }
+    
+}
