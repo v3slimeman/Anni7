@@ -86,3 +86,20 @@
 "4cx-4" {name="???" id=2}
 "4cx-5" {name="???" id=3}
 "4cx-6" {name="???" id=4}
+
+"finxx-1" {name="Refinery 1" id=1}
+"finxx-2" {name="Refinery 2" id=2}
+"finxx-3" {name="Refinery 3" id=3}
+"finxx-3x" {name="Refinery 3" id=-1}
+"finxx-4" {name="Refinery 4" id=4}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
+"finxx-5" {name="Refinery 5" id=5}
