@@ -1059,7 +1059,7 @@ fa {
 }
 
 finxx {
-	area_name "The Quarry"
+	area_name "Chemical Plant"
 	area_label_frame 3
 	
 	tile_graphics Tilequarry
@@ -1068,7 +1068,7 @@ finxx {
 	background_graphics field2bg
 	
 	global_particle_1 wind
-	global_particle_2 rocks2
+	global_particle_2 rocks
 	global_particle_3 cloudwind
 	
 	decoration_1 ChainLink3

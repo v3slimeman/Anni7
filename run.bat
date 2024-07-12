@@ -1,2 +1,2 @@
-@PATH C:\Program Files (x86)\Steam\steamapps\common\theendisnigh
-@TheEndIsNigh -modpaths 1 %cd%
+@PATH C:\Program Files (x86)\Steam
+@steam.exe -applaunch 583470 -modpaths 1 %cd%
