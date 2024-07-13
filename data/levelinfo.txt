@@ -25,11 +25,11 @@
 "sc-16" {name="Soul Catalyst 13" id=13}
 "sc-17" {name="Soul Catalyst 14" id=14}
 "sc-18" {name="Soul Catalyst 15" id=15}
-"sc-19" {name="Soul Catalyst" id=1}
-"sc-20" {name="Soul Catalyst" id=1}
-"sc-xu1" {name="???" id=1}
-"sc-xu2" {name="???" id=-1}
-"sc-xu3" {name="???" id=2}
+"sc-19" {name="Soul Catalyst" id=-1}
+"sc-20" {name="Soul Catalyst" id=-1}
+"scx-1" {name="???" id=1}
+"scx-2" {name="???" id=-1}
+"scx-3" {name="???" id=2}
 
 "fa-1" {name="Frozen Abyss 1" id=-1}
 "fa-2" {name="Frozen Abyss 2" id=-1}
@@ -86,18 +86,3 @@
 "4cx-4" {name="???" id=2}
 "4cx-5" {name="???" id=3}
 "4cx-6" {name="???" id=4}
-
-"finxx-1" {name="Chemical Plant 1" id=1}
-"finxx-2" {name="Chemical Plant 2" id=2}
-"finxx-3" {name="Chemical Plant 3" id=3}
-"finxx-3x" {name="Chemical Plant 3" id=-1}
-"finxx-4" {name="Chemical Plant 4" id=4}
-"finxx-5" {name="Chemical Plant 5" id=5}
-"finxx-6" {name="Chemical Plant 6" id=6}
-"finxx-7" {name="Chemical Plant 7" id=7}
-"finxx-8" {name="Chemical Plant 8" id=8}
-"finxx-9" {name="Chemical Plant 9" id=9}
-"finxx-10" {name="Chemical Plant 10" id=10}
-"finxx-11" {name="Chemical Plant 11" id=11}
-"finxx-12" {name="Chemical Plant 12" id=12}
-"finxx-13" {name="Chemical Plant 13" id=13}

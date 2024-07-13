@@ -1,3 +1,29 @@
+c9 {
+    tile_graphics TileGlitch
+    overlay_graphics Overlaysretro
+    background_graphics bgretro
+    foreground_graphics none
+    palette 1
+    
+    music [retro/turkish_intro.ogg, retro/turkish_loop.ogg]
+    
+    music_volume 1
+    ambience_volume 1
+    
+    area_type cart
+    
+    cart_intro_png TitleCart
+    cart_intro_palette 14
+
+    art_alts [
+        [Player, PlayerRetro][Frog, Frogretro][Floater, Floater2][Slug, Slugretro]
+        [SkullFloater, SkullFloaterretro][Gasser, Gasserretro][Splatter, Splatterretro][CheepCheep, cheepretro][Bullet, bulletretro]
+        [SpitterX, SpitterXretro][SpitterY, SpitterYretro][AimSpitter, SpitterZretro][Cannonball, cannonballretro][Fireball, cannonballfireretro]
+        [Hopper, hopperretro][SkullSlug, SkullSlugretro][SkullCrow, SkullCrowretro][ChainChomp, ChainChompretro][ChainLink, ChainLinkretro][ChainLink2, ChainLinkretro]
+        [Mask, Maskretro][Revolver, Revolverretro][GasCloud, GasCloudretro][Cannon,Cannonretro][Cannonstand,Cannonstandretro][Bouncer,Bouncerretro][ChainHitch,ChainHitchRetro]
+    ]
+}
+
 1 {
     area_name "Crimson Fields"
     tile_graphics Tilefield
@@ -61,7 +87,7 @@ tf {
     
     tile_particle_1 drip
     tile_particle_2 splash
-    
+
     npc_1 NPCBA1
     npc_2 NPCBA2
     npc_3 NPCBA3
@@ -72,13 +98,18 @@ tf {
     area_type normal
 
     2 {
-      npc_1 NPCH3
+      npc_1 NPCH2
+      art_alts [
+        [SpeechBubble2, SpeechBubble2_left]
+      ]
     }
 
     4 {
       npc_1 NPCH4
+      npc_2 NPCWIP
       art_alts [
         [ChainLink2, ChainLink2]
+        [SpeechBubble2, SpeechBubble2_left]
       ]
     }
 
@@ -94,6 +125,7 @@ bb {
     overlay_graphics Overlayscomplex
     background_graphics hellbg
     foreground_graphics None
+    area_label_frame 1
     fx_shader reflectionripples
     fx_shader_mid distortionparticles
     palette 3
@@ -107,7 +139,8 @@ bb {
     tile_particle_1 drip
     tile_particle_2 splash
     
-    npc_1 NPCH2
+    npc_1 NPCH3
+    npc_2 NPCWIP
 
     decoration_1 Decoration0
     decoration_2 Decoration1
@@ -123,6 +156,7 @@ bb {
     art_alts [
         [OrbSmall, orbblob]
         [ChainLink2, None]
+        [SpeechBubble2, SpeechBubble2_left]
     ]
 }
 
@@ -219,10 +253,9 @@ ttu {
 
 sc {
     area_name "Soul Catalyst"
-    area_label_frame 3
     tile_graphics Tilecity
     overlay_graphics Overlaystheglow
-    background_graphics ch3bg
+    background_graphics bg_soul
     foreground_graphics fg1
     palette 5
     fx_shader distortionparticles
@@ -238,9 +271,9 @@ sc {
     global_particle_2 bgrain
     global_particle_3 distortrain
     
-    npc_1 CaretakerNPC
-    npc_2 FlightNPC
-    npc_3 NonexistentNPC
+    npc_1 NPC_soul_1
+    npc_2 NPC_soul_2
+    npc_3 NPC_soul_3
 	
     player_physics "data/playerphysics_sc.txt"
     
@@ -325,7 +358,7 @@ sc {
 	}
 	
 	19 {
-		background_graphics bgsolid
+		background_graphics bg_soul_big
 	
 		ambience BackgroundBellsLoud.ogg
                 music_volume 0
@@ -347,7 +380,7 @@ sc {
 		
 		global_particle_3 rocks
 		
-		npc_1 QuitterNPC
+		npc_1 NPC_soul_4
 
                 art_alts [
                 [Floater, Ghost][OrbSmall, bulletretro][Sentry, ThwompSentry]
@@ -362,10 +395,9 @@ sc {
 
 scx {
     area_name "Soul Catalyst"
-    area_label_frame 3
     tile_graphics Tilecity
     overlay_graphics Overlaystheglow
-    background_graphics ch3bg
+    background_graphics bg_soul
     foreground_graphics fg1
     palette 5
     fx_shader distortionparticles
@@ -382,8 +414,8 @@ scx {
     global_particle_2 bgrain
     global_particle_3 distortrain
 
-    npc_1 SecretTinnitusNPC
-    npc_2 SecretBellDenierNPC
+    npc_1 NPC_soul_1x
+    npc_2 NPC_soul_2x
 
     2 {
     music_volume .6
@@ -934,10 +966,10 @@ fa {
 	   tile_particle_4 waterfall2
 	   tile_particle_5 splash
 	   
-	   music_volume 0.7
+
 	   ambience rain.ogg
 	   
-	   sfx_file mutebuttons.txt
+	   sfx_file explosionbuttons.txt
 	   
        platform_physics "data/platformphysics_mines.txt"
 	}	
@@ -1059,7 +1091,7 @@ fa {
 }
 
 finxx {
-	area_name "Chemical Plant"
+	area_name "The Quarry"
 	area_label_frame 3
 	
 	tile_graphics Tilequarry
@@ -1068,7 +1100,7 @@ finxx {
 	background_graphics field2bg
 	
 	global_particle_1 wind
-	global_particle_2 rocks
+	global_particle_2 rocks2
 	global_particle_3 cloudwind
 	
 	decoration_1 ChainLink3

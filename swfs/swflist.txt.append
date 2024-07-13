@@ -1,13 +1,16 @@
 game [
+  anni7main.swf
+  Anni_7_Replacements.swf
+  Soul_catalyst_bgs.swf
+  AbyssArt.swf
+  es_tilesets.swf
+  es_no_rain.swf
+  es_nomorecutscenes.swf
+  remake_tilesets.swf
   tilesalt.swf
   tilequarry.swf
   RadleySWF.swf
-  remake_tilesets.swf
-  anni7main.swf
-  nothing.swf
   good_stuff.swf
   fgdeco_artalts.swf
-  es_tilesets.swf
-  AbyssArt.swf
-  Anni_7_Replacements.swf
+  nothing.swf
 ]

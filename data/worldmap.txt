@@ -22,7 +22,7 @@ meta {
     
     stevenheads [NPCH1 NPCH2 NPCH3 NPCH4]
     steventhreshtumors [0 0 0 0]
-    stevenlevels [ttu-0 sc-1 fa-1 4c-0]
+    stevenlevels [ttu-0 fa-1 sc-1 4c-0]
     
     mainworlds [1 tf bb sc fa 4c] //if you pause on these worlds, it lets you open the map. otherwise you get "exit area"
     cartworlds [c1 c2 c3 c4a c4b c4c c5a c5b c5c c6 g0 g1 g2 g3 g4 g5 g6 g9 i1 i2 i3 i4 i5] //launch console automatically when you exit from these worlds
@@ -31,7 +31,7 @@ meta {
     bodylevel 5c-21
     heartlevel 5b-23
     
-    mute_warpunlock_message [ttu-21 sc-20 fa-15 ft-18] //levels that have a warp point but shouldnt show the "warp point unlocked" message
+    mute_warpunlock_message [ttu-21 sc-20 fa-15 4c-18] //levels that have a warp point but shouldnt show the "warp point unlocked" message
     
     game_over_checkpoints [[1d 1d-1] [2d 2d-0] [3d 3d-1] [6 6-1]] //if you game over in world "1d", spawn back to 1d-1, etc. this only matters when loading from a save file, otherwise it uses the last checkpoint you visited
     iron_cart_entrypoints [i1-1 i2-1 i3-1 i4-1 $i1-1] //used to set the respawn point in an iron cart
@@ -53,7 +53,7 @@ meta {
     save_initiallevel c9-0
     save_lightspawn 1-1
     save_darkspawn 1d-1
-    save_lightspawnlabel "The End"  //since the game can set your save to these levels without visiting them, their names need to be manually set so they show up on the save
+    save_lightspawnlabel "WELCOME"  //since the game can set your save to these levels without visiting them, their names need to be manually set so they show up on the save
     save_darkspawnlabel "Anguish"
     
     
@@ -100,6 +100,7 @@ nodes {
         page lightworld
         levelgroups [sc scx]
         
+        left Intersection2
         down Intersection2
     }
 
@@ -119,6 +120,24 @@ nodes {
         levelgroups [4c 4cx]
         
         up Intersection2
+    }
+
+    ThousandTumorsUnder {
+        clipname thousand
+        entrylevel ttu-0
+        page lightworld
+        levelgroups [ttu]
+        
+        left Intersection2
+    }
+
+    TwilightRidge {
+        clipname bridge
+        entrylevel ttu-0
+        page lightworld
+        levelgroups [ttu]
+        
+        right Intersection1
     }
     
 }
