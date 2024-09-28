@@ -7,8 +7,20 @@ TestNPC {
     ]
 }
 
+<<<<<<< Updated upstream
+=======
+NPCWIP {
+#wet floor sign
+    movieclip NPCBA2
+    sound_id none
+    text [
+        "WORK IN PROGRESS!\nPlease wait up to\n\'1\' month!"
+    ]
+}
+
+>>>>>>> Stashed changes
 NPCBA1 {
-#upside down crying
+#joe the receptionist
     movieclip NPCBA1
     sound_id NPCBlob
     text [
@@ -43,13 +55,47 @@ NPCBA3 {
         "WE BREAK DOWN\nDOORS... BUT IT\nTAKE LONG TIME."
         "SO I SEND\nIN SCAVENGERS\nTO FIND KEYS."
         "LITTLE SUCCESS...\nBUT PERHAPS YOU\nARE DIFFERENT?"
-        "FIND # KEYS\nAND YOU WILL\nBE HONOROUS."
+        "FIND 4 KEYS\nAND YOU WILL\nBE HONOROUS."
         "MEET IN RIGHT\nSIDE OF BASEMENT\nWHEN YOU ARE DONE."
     ]
 }
 
+NPCBA4 {
+#ATM machine
+    movieclip NPCBA4
+    sound_id NPCSteven
+    text [
+        "FEED ME A STRAY DOG"
+    ]
+}
+
+NPCBA5 {
+#kate the blackbelt
+    movieclip NPCBA5
+    sound_id NPCBlob
+    text [
+        "hey, tenderfoot!\ncare for a smooch?\nthe warpers keep"
+        "telling me they'll give\nme one on their\nway back, but they"
+        "never see me again!\n...are they scared?"
+        "\nit's just a 'lil kiss..."
+    ]
+}
+
+NPCBA6 {
+#oxide the ball pit dweller
+    movieclip NPCBA6
+    sound_id NPCBlob
+    text [
+        "\nhey uh"
+        "not that anyone's\never done it before,\nbut..."
+        "you could totally\nhold more than\nthree keys if"
+        "you really wanted to.\ni know it may not\n look like it,"
+        "but i think you're\npacking"
+    ]
+}
+
 GlideNPC {
-#basic sideways
+#daniel the basic sideways
     movieclip NPC0
     sound_id NPCSkull
     text [
@@ -168,6 +214,7 @@ NPCFA1 {
     ]
 }
 
+<<<<<<< Updated upstream
 NPCH1 {
 #portal
     movieclip NPCH4
@@ -220,6 +267,8 @@ NPCH4 {
     ]
 }
 
+=======
+>>>>>>> Stashed changes
 NPC_mines_1  {
 #fucked up drainage
     movieclip NPC4
@@ -338,3 +387,195 @@ NPC_mines_5  {
 	]
 }
 
+NPCSP1 { 
+#sus-2 diving tutorial
+    movieclip NPC1
+    sound_id NPCSkull
+    text [
+        "\n. . ."
+		"hello there\n. . ."
+		"shame you arrived a tad bit too late to the party"
+		"this place isn't quite what it used to be"
+		"hell, even gravity isn't the same as it was"
+		"one second you're resting on your bones . . ."
+		"and the other you're stuck to the ceiling!"
+		"i wish there was a way to like, jump downwards"
+		"sort of like . . .\na dive . . ."
+		"but like . . .\nin the air . . ."
+		"i wonder . . . \n. . . . . ."
+		"if only\nthere were\nsuch a thing . . . . . ."
+		". . . . .\n. . . . .\n. . . . ."
+    ]
+}
+
+NPCSP2 { 
+#sus-3 boost tutorial
+    movieclip NPCSUS1
+    sound_id NPCSkull
+    text [
+		"ah . . .\nstuck too?"
+		"i should've known that this would happen . . ."
+		"all because i didn't HOLD my jump . . ."
+		"how would i know that my momentum wouldn't carry over?"
+		"now my momentum has been stolen, and my day is ruined!"
+    ]
+}
+
+NPCSPB1 { 
+#upside down ? blob
+    movieclip NPCSUS3
+    sound_id NPCBlob
+    text [
+        "\nhuh . . ."
+		"why are you upside down?"
+		"does the world look better that way to you?"
+		"doesn't that hurt your forehead?"
+		"i bet it'd hurt . . ."
+		"anyways, nice place you have here"
+		"i didn't think you lot had it in you!"
+		"to go this far up, you must be desperate!"
+		"but i like the spirit. big fan"
+		"me? oh, no. i'm just here to snoop around"
+		"i snuck through that crack on the floor down there"
+		"actually, i think that was years ago"
+		"that would explain all the worms and stuff"
+		"\n. . ."
+		"\n. . . see ya!"
+    ]
+}
+
+NPCSPD1 { 
+#denial blob
+    movieclip NPCSUS2
+    sound_id NPCBlob
+    text [
+        "\nwelcome!"
+		"it's been a long time since i've seen new faces"
+		"are you enjoying\nthe ride?"
+		"this ship has been slowly taking us to our destination"
+		"we are descending, going deeper than anyone has ever gone"
+		"down and down into the endless abyss . . ."
+		"it's been taking us there for years, maybe even decades"
+		"i can't recall what the outside world looks like anymore"
+		"\n. . ."
+		"sometimes i hear the screams of other passengers"
+		". . . but i'm too\nscared to look"
+		"\n. . ."
+		"i saw a rock floating up towards the ceiling the other day"
+		"must have been my\nimagination . . ."
+		"this ship has\nbeen going down,\n. . . right?"
+		"i can't even\nrecall . . ."
+    ]
+}
+
+KADW1 {
+    movieclip NPCB2
+    sound_id NPCBlob
+    text [
+        "\nhi"
+	"i'm just hanging\nout here"
+	"\nchillin'"
+        "at the edge\nof a cliff"
+        "at the end\nof the world"
+	"\n. . ."
+        "\nwhat?"
+        "you like going\nplaces? seeing\npeople?"
+	"that's cool,\nhave fun"
+	"me, i'm staying\nright here"
+	"\nperfectly safe . . ."
+	"\nforever"
+    ]
+}
+
+KADW2 {
+    movieclip NPCD6
+    sound_id NPCBlob
+    text [
+	"\nnice view, innit?"
+        "funny how stuff like\nthis persists even\nafter the end"
+        "\n. . ."
+        "\nof everything"
+	"\nbeautiful, right?"
+        "\n. . ." 
+	"ehhhhhh whatever\n. . ."
+	"we're all still\nfucked!"
+    ]
+}
+
+NPCH1 {
+#portal
+    movieclip NPC_Portal_anni7_yves
+    sound_id NPCSteven
+    text [
+        "do you see banana man"
+    ]
+    
+    alt_text [
+        "thousand tumors under\nby v3slimeman"
+    ]
+}
+
+NPCH2 {
+#portal
+    movieclip NPC_Portal_anni7_yves
+    sound_id NPCSteven
+    text [
+        "hopping over on the white hot sand"
+    ]
+    
+    alt_text [
+        "(AREA)\nfrozen abyss\nby yves"
+    ]
+}
+
+NPCH3 {
+#portal
+    movieclip NPC_Portal_anni7_rot
+    sound_id NPCSteven
+    text [
+        "here he come with some for me"
+    ]
+    
+    alt_text [
+        "(AREA)\nsoul catalyst\nby rot"
+    ]
+}
+
+NPCH4 {
+#portal
+    movieclip NPC_Portal_anni7_enana
+    sound_id NPCSteven
+    text [
+        "freshly taken from banana tree"
+    ]
+    
+    alt_text [
+        "(AREA)\nflooded tunnels\nby enana blanca"
+    ]
+}
+
+NPCH5 {
+#portal
+    movieclip NPC_Portal_anni7_surreal
+    sound_id NPCSteven
+    text [
+        "banana man me want a ton"
+    ]
+    
+    alt_text [
+        "(AREA)\n(%$!$%@)# @%!**.@#\nby surrealdude"
+    ]    
+}
+
+NPCH6 {
+#portal
+    movieclip NPC_Portal_anni7_kadw
+    sound_id NPCSteven
+    text [
+        "give me double and a bonus one"
+    ]
+    
+    alt_text [
+        "(AREA)\nmoonrise ridge\nby kadw"
+    ]
+}

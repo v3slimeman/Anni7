@@ -8,6 +8,9 @@
     palette 1
     
     ambience wind.ogg
+
+    npc_1 NPCH5
+    npc_2 NPCH6
     
     music_volume 1
     ambience_volume 1.5
@@ -25,22 +28,21 @@
     area_type normal
 
     art_alts [
-        [OrbSmall, orbblob]
+        [OrbSmall, notwendy]
         [ChainLink2, None]
         [Floater, TheDoor]
     ]
 
     2 {
-        npc_1 NPCH2
         art_alts [
         [Floater, WeHaveIt]
         ]
     }
 
     3 {
-        npc_1 NPCH3
         decoration_3 grassfg2
     }
+
 }
 
 tf {
@@ -72,7 +74,15 @@ tf {
     area_type normal
 
     2 {
+<<<<<<< Updated upstream
       npc_1 NPCH3
+=======
+      npc_1 NPCH2
+      npc_2 NPCBA5
+      art_alts [
+        [SpeechBubble2, SpeechBubble2_left]
+      ]
+>>>>>>> Stashed changes
     }
 
     4 {
@@ -107,7 +117,13 @@ bb {
     tile_particle_1 drip
     tile_particle_2 splash
     
+<<<<<<< Updated upstream
     npc_1 NPCH2
+=======
+    npc_1 NPCH3
+    npc_2 NPCH5
+    npc_3 NPCWIP
+>>>>>>> Stashed changes
 
     decoration_1 Decoration0
     decoration_2 Decoration1
@@ -120,10 +136,47 @@ bb {
     
     area_type normal
 
+    3 {
+      npc_2 NPCBA6
+    }
+
     art_alts [
         [OrbSmall, orbblob]
         [ChainLink2, None]
     ]
+}
+
+te {
+    area_name "The Expansion"
+    tile_graphics Tilesalt
+    overlay_graphics Overlayscomplex
+    background_graphics ch2bg_b
+    palette 1
+    area_label_frame 1
+    fx_shader distortionparticles
+    
+    music sallyport.ogg
+    ambience wind.ogg
+    
+    music_volume .75
+    ambience_volume 2
+    
+    tile_particle_1 drip
+    tile_particle_2 splash
+    
+    npc_1 NPCH6
+    npc_2 NPCBA4
+
+    decoration_1 Decoration0
+    decoration_2 Decoration1
+    decoration_3 inst10
+    
+    area_type normal
+ 
+    art_alts [
+    [OrbSmall, bulletretro]
+    ]
+
 }
 
 ttu {
@@ -242,7 +295,9 @@ sc {
     npc_2 FlightNPC
     npc_3 NonexistentNPC
 	
-    player_physics "data/playerphysics_sc.txt"
+    lowgrav_physics "data/playerphysics_ts.txt"
+
+    sfx_file retinaracrushers.txt
     
     area_type normal
 	
@@ -389,7 +444,7 @@ scx {
     music_volume .6
     ambience_volume 1.2
    
-    player_physics "data/playerphysics_sc.txt"
+    lowgrav_physics "data/playerphysics_ts.txt"
     }
   
     art_alts [
@@ -1058,34 +1113,266 @@ fa {
 	}
 }
 
+<<<<<<< Updated upstream
 finxx {
 	area_name "Chemical Plant"
 	area_label_frame 3
+=======
+sp {
+    area_name "Suspended Paradise"
+    area_label_frame 7
+    background_graphics suspensebg
+    foreground_graphics none
+    tile_graphics Tilesuspense
+    overlay_graphics Overlaysairship
+    palette 9
+>>>>>>> Stashed changes
 	
-	tile_graphics Tilequarry
-	overlay_graphics Overlayscomplex
+	#shader_param = opacity of grav tiles
+	fx_shader sludgeripples
 	
-	background_graphics field2bg
+	global_particle_1 rocks
+	global_particle_2 windup
+	global_particle_3 windup2
 	
+<<<<<<< Updated upstream
 	global_particle_1 wind
 	global_particle_2 rocks
 	global_particle_3 cloudwind
+=======
+	tile_particle_1 spark2
+	tile_particle_2 smoke_downwindr
+	tile_particle_3 smoke2_downwindr
+>>>>>>> Stashed changes
 	
-	decoration_1 ChainLink3
+	player_physics "data/playerphysics_suspense.txt"
+	lowgrav_physics "data/playerphysics_normal.txt"
 	
-	fx_shader_mid quarry
-	midfx_graphics ShadeBox
-	midfx_layer 2
-
-	palette 20
+	#https://soundcloud.com/donadedoncha/tchaikovsky-swan-lake-metal
+	music [suspended_intro.ogg, suspended_loop.ogg]
+    ambience cogs.ogg
+    
+    music_volume 1
+    ambience_volume 1
+	
+	npc_1 NPCSP1
+	npc_2 NPCSP2
+    
+    area_type normal
+	
+	decoration_1 SuspensePull
+	decoration_2 SuspensePullDown
+	decoration_3 SuspensePullRight
 	
 	art_alts [
-		[GlowShroomSmall, Lever1]
-		[GlowShroom, Lever2]
+		[MiniWorm, MiniWormSuspense]
 	]
 	
+	0 {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
+		music_volume 1.5
+		ambience_volume 0.5
+		area_label_frame 0
+		decoration_3 SuspenseGramophone
+		shader_param .4
+	}
+	
+	1 {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
+		music_volume 1.5
+		ambience_volume 0.5
+		area_label_frame 0
+		shader_param .4
+	}
+	
+	2 {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
+		music_volume 1.5
+		ambience_volume 0.5
+		area_label_frame 0
+		decoration_3 SuspenseTutorial1
+		shader_param .4
+	}
+	
+	3 {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
+		music_volume 1.5
+		ambience_volume 0.5
+		area_label_frame 0
+		decoration_3 SuspenseTutorial2
+		shader_param .4
+		art_alts [
+			[MiniWorm, MiniWormSuspense][ThwampGear, SuspensePullLeft][ThwampEye, SuspensePullRight]
+		]
+	}
+	
+	3x {
+		music none
+		area_label_frame 0
+		shader_param .8
+	}
+	
 	4 {
-		shader_param 0.9
+		music_volume 0.8
+	}
+	
+	5 {
+		music_volume 0.9
+		shader_param .8
+	}
+	
+	10 {
+		decoration_1 SuspensePullLeft
+	}
+	
+	15 {
+		decoration_2 SuspensePullLeft
+	}
+	
+	17 {
+		global_particle_1 none
+		global_particle_2 none
+		global_particle_3 none
+	}
+	
+	test {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
 	}
 }
 
+spx {
+    area_name "Suspended Paradise"
+    area_label_frame 7
+    background_graphics suspensebg
+    foreground_graphics none
+    tile_graphics Tilesuspense
+    overlay_graphics Overlaysairship
+    palette 9
+	
+	#shader_param = opacity of grav tiles
+	fx_shader suspendedgravripples
+	
+	global_particle_1 rocks
+	global_particle_2 windup
+	global_particle_3 windup2
+	
+	tile_particle_1 spark2
+	tile_particle_2 smoke_downwindr
+	tile_particle_3 smoke2_downwindr
+	
+	player_physics "data/playerphysics_suspense.txt"
+	lowgrav_physics "data/playerphysics_normal.txt"
+	
+	music [gymnopedies_intro.ogg, gymnopedies_loop.ogg]
+    ambience cogs.ogg
+	stop_previous_music false
+    
+    music_volume 1
+    ambience_volume 1
+	
+	npc_1 NPCSPD1
+	npc_2 NPCSPB1
+    
+    area_type normal
+	
+	decoration_1 SuspensePull
+	decoration_2 SuspensePullDown
+	decoration_3 SuspensePullRight
+	
+	art_alts [
+		[MiniWorm, MiniWormSuspense]
+	]
+	
+	1 {
+		music [suspended_stinger_intro.ogg, suspended_stinger_loop.ogg]
+		music_volume 1.5
+		ambience_volume 0.5
+		area_label_frame 0
+	}
+	
+	2 {
+		shader_param .6
+	}
+	
+	4 {
+		shader_param 1.6
+	}
+	
+	5 {
+		decoration_3 SuspensePullLeft
+	}
+	
+	6 {
+		shader_param .6
+	}
+}
+
+mr {
+	area_name "Moonrise Ridge"
+	area_label_frame 6
+	tile_graphics Tileradtower
+	overlay_graphics Overlaysscrap
+	background_graphics ch2bg
+	foreground_graphics none
+	palette 10
+
+    	#fx_shader reflectionripples
+   	fx_shader_mid sludgeglowlight
+    	midfx_graphics SolidBox
+    	midfx_layer 2
+
+    	tile_particle_1 kadw_waterfall
+    	tile_particle_2 kadw_waterfall_splash
+    	tile_particle_3 bubbles
+    	tile_particle_4 drip    
+	tile_particle_5 spark
+
+    	decoration_1 Decoration4
+    	decoration_2 Decoration5
+
+ 	global_particle_1 kadw_stars
+	global_particle_2 kadw_rocks
+
+	npc_1 KADW1
+	npc_2 KADW2
+
+	area_type normal
+
+	music [riverflowsinyou_intro.ogg, riverflowsinyou_loop.ogg]
+	ambience wind.ogg
+
+	music_volume .6
+	ambience_volume 1
+
+	art_alts [
+		[Floater, Ghost][MiniFly, MiniWisp][MiniRat, MiniRatWhite][MiniFrog, MiniFrogWhite]
+	][Floater, fire_my_guy]
+}
+
+n {
+    area_name "Necropolis"
+    tile_graphics Tilesalt
+    overlay_graphics Overlayscomplex
+    background_graphics ch2bg_b
+    foreground_graphics None
+    area_label_frame 1
+    fx_shader distortionparticles
+    palette 11
+
+    tile_particle_1 smoke
+    tile_particle_2 smoke2
+    tile_particle_3 spark
+    global_particle_1 embers
+    
+    music sallyport.ogg
+    ambience fire.ogg
+    
+    music_volume 1
+    ambience_volume 1
+    
+    area_type normal
+
+    art_alts [
+    [OrbSmall, fire_my_guy][ChainLink2, None]
+    ]
+}

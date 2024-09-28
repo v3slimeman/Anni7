@@ -1,10 +1,10 @@
 pages {
     lightworld {
-        collectibles 238 //lives + biglives + carts + bodyparts (used for "percent complete" display)
+        collectibles 100 //lives + keys (used for "percent complete" display)
     }
     
     darkworld {
-        collectibles 7 //lives + biglives + carts + bodyparts (used for "percent complete" display)
+        collectibles 0 //lives + biglives + carts + bodyparts (used for "percent complete" display)
     }
     
     console {
@@ -20,18 +20,28 @@ meta {
     upwipes [4-1hub 4a-16 4c-1 5c-1 6-1 7-0 4b-15]
     downwipes [4-1hub 4c-15 5a-1 3d-23 4a-1 5bxu-5 6-21]
     
+<<<<<<< Updated upstream
     stevenheads [NPCH1 NPCH2 NPCH3 NPCH4]
     steventhreshtumors [0 0 0 0]
     stevenlevels [ttu-0 sc-1 fa-1 4c-0]
+=======
+    stevenheads [NPCH1 NPCH2 NPCH3 NPCH4 NPCH5 NPCH6]
+    steventhreshtumors [0 0 0 0 0 0]
+    stevenlevels [ttu-0 fa-1 sc-1 4c-1 sp-0 mr-1]
+>>>>>>> Stashed changes
     
-    mainworlds [1 tf bb sc fa 4c] //if you pause on these worlds, it lets you open the map. otherwise you get "exit area"
+    mainworlds [1 tf bb sc fa 4c sp mr n] //if you pause on these worlds, it lets you open the map. otherwise you get "exit area"
     cartworlds [c1 c2 c3 c4a c4b c4c c5a c5b c5c c6 g0 g1 g2 g3 g4 g5 g6 g9 i1 i2 i3 i4 i5] //launch console automatically when you exit from these worlds
     
     headlevel 5a-22
     bodylevel 5c-21
     heartlevel 5b-23
     
+<<<<<<< Updated upstream
     mute_warpunlock_message [ttu-21 sc-20 fa-15 ft-18] //levels that have a warp point but shouldnt show the "warp point unlocked" message
+=======
+    mute_warpunlock_message [ttu-21 sc-20 fa-15 4c-18 sp-17 mr-16] //levels that have a warp point but shouldnt show the "warp point unlocked" message
+>>>>>>> Stashed changes
     
     game_over_checkpoints [[1d 1d-1] [2d 2d-0] [3d 3d-1] [6 6-1]] //if you game over in world "1d", spawn back to 1d-1, etc. this only matters when loading from a save file, otherwise it uses the last checkpoint you visited
     iron_cart_entrypoints [i1-1 i2-1 i3-1 i4-1 $i1-1] //used to set the respawn point in an iron cart
@@ -48,8 +58,8 @@ meta {
     cart_lives_overrides [[$c1-1 39]]
     cart_title_overrides [[$c1-1 "AllStars"] [$i1-1 "Acceptance"]]
     
-    savefile_completion_counter_max 285 //count of total collectible tumors, carts, body parts (3), cart achievements, map warp points (number of levels in the array below), and endings (2)
-    savefile_completion_warpoints [1-1 2-0 3-1 4a-1 4b-1 4c-1 5a-1 5b-1 5c-1 4-1hub 1d-1 2d-0 3d-1 6-1 6-21 7-0] //visiting these levels counts for save file completion
+    savefile_completion_counter_max 100 //count of total collectible tumors, keys, and endings (0)
+    savefile_completion_warpoints [2-0 3-1 4a-1 4b-1 4c-1 5a-1 5b-1 5c-1 4-1hub 1d-1 2d-0 3d-1 6-1 6-21 7-0] //visiting these levels counts for save file completion
     save_initiallevel c9-0
     save_lightspawn 1-1
     save_darkspawn 1d-1
@@ -77,7 +87,9 @@ nodes {
         page lightworld
         unlock_condition always_unlocked
         
+        left MoonriseRidge
         right Ash
+        up SuspendedParadise
         down FrozenAbyss
         select Intersection1
     }
@@ -120,5 +132,36 @@ nodes {
         
         up Intersection2
     }
+<<<<<<< Updated upstream
+=======
+
+    ThousandTumorsUnder {
+        clipname thousand
+        entrylevel ttu-0
+        page lightworld
+        levelgroups [ttu]
+        
+        left Intersection2
+    }
+
+    SuspendedParadise {
+        clipname sus
+        entrylevel sp-0
+        page lightworld
+        levelgroups [sp spx]
+        
+        down Intersection1
+        right Intersection1
+    }
+
+    MoonriseRidge {
+        clipname moon
+        entrylevel mr-1
+        page lightworld
+        levelgroups [mr]
+        
+        right Intersection1
+    }
+>>>>>>> Stashed changes
     
 }
